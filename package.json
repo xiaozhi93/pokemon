@@ -5,13 +5,18 @@
   "author": "windfly <974589985@qq.com>",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build-scss -- --watch",
+    "build": "npm run build-clean && npm run build-scss && npm run build-autoprefix && npm run build-cleancss",
     "build-clean": "rimraf dist",
-    "build-scss": "node-sass --output-style expanded src/pokemon.scss dist/pokemon.css && node-sass --output-style compressed src/pokemon.scss dist/pokemon.min.css "
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
+    "build-scss": "node-sass --output-style expanded src/pokemon.scss dist/pokemon.css",
+    "build-cleancss": "cleancss -o dist/pokemon.min.css dist/pokemon.css"
   },
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "clean-css-cli": "^4.3.0",
     "node-sass": "^4.12.0",
     "rimraf": "^2.6.3"
   },
