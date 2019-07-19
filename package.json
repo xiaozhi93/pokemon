@@ -1,0 +1,21 @@
+{
+  "name": "pokemon",
+  "version": "0.1.0",
+  "description": "A minimal css framework for web",
+  "author": "windfly <974589985@qq.com>",
+  "main": "index.js",
+  "scripts": {
+    "build-clean": "rimraf dist",
+    "build-scss": "node-sass --output-style expanded src/pokemon.scss dist/pokemon.css && node-sass --output-style compressed src/pokemon.scss dist/pokemon.min.css "
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
