@@ -1,0 +1,36 @@
+@charset "utf-8"
+.pokemonLogo {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 4px;
+    margin-top: -2px;
+    margin-left: -12px;
+    background: #ffa200;
+    transform: rotateZ(45deg);
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 8px;
+      width: 8px;
+      height: 4px;
+      background: #ffa200;
+    }
+    &::after {
+      top: 10px;
+    }
+  }
+}
