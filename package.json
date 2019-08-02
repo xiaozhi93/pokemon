@@ -6,11 +6,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build-scss -- --watch",
+    "start-docs": "npm run build-doc -- --watch",
     "build": "npm run build-clean && npm run build-scss && npm run build-autoprefix && npm run build-cleancss",
     "build-clean": "rimraf dist",
-    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/pokemon.css css/pokemon.css",
     "build-scss": "node-sass --output-style expanded src/pokemon.scss dist/pokemon.css",
-    "build-cleancss": "cleancss -o dist/pokemon.min.css dist/pokemon.css"
+    "build-cleancss": "cleancss -o dist/pokemon.min.css dist/pokemon.css",
+    "build-doc": "node-sass --output-style expanded docs/pokemon-docs.scss docs/pokemon-docs.css && node-sass --output-style expanded src/pokemon.scss docs/pokemon.css"
   },
   "keywords": [],
   "license": "ISC",

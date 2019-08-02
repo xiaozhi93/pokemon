@@ -1,7 +1,14 @@
-@mixin cleafix {
+@mixin clearfix {
   &::after {
     clear: both;
     content: "";
-    display: "table";
+    display: "block";
+  }
+}
+
+// 响应式
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content
   }
 }
