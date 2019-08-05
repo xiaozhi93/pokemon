@@ -43,7 +43,21 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
   display: none;
 }
 .is-clipped {
-  overflow: hidden !important
+  overflow: hidden !important;
 }
 // 盒模型
 
+// 重置样式
+.button,
+.input,
+.select {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+}
+.button[disabled] {
+  cursor: not-allowed;
+}

@@ -1,9 +1,30 @@
+@import "../config/variables.scss";
+
 @mixin clearfix {
   &::after {
     clear: both;
     content: "";
     display: "block";
   }
+}
+
+@mixin center($width, $height: 0) {
+  position: absolute;
+  left: calc(50% - (#{$width} / 2));
+  top: calc(50% - (#{$width} / 2));
+}
+
+@mixin loader {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $grey-lighter;
+  border-radius: 1000px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
 }
 
 // 响应式

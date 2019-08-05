@@ -1,3 +1,5 @@
+@import "../config/variables.scss";
+
 @mixin button-small {
   border-radius: 2px;
   font-size: 11px;
@@ -15,21 +17,80 @@
   height: 48px;
   padding: 11px 20px;
 }
-
+// 基础
 .button {
   display: inline-block;
+  justify-content: center;
   padding: 4px 12px;
   border-color: $grey-lighter;
   border-width: 1px;
   border-radius: 3px;
+  background: #ffffff;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
   color: $grey;
+  // states
   &:hover, &.is-hovered {
     border-color: $grey-light;
     color: $grey;
+  }
+  &.is-loading {
+    color: transparent !important;
+    pointer-events: none;
+    &::after {
+      @include center(1em);
+      @include loader;
+      position: absolute !important
+    }
+  }
+  &[disabled] {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    opacity: 0.5;
+  }
+  // colors
+  &.is-primary {
+    background: #348fe2;
+    border-color: transparent;
+    color: #fff;
+    &:hover, &.is-hovered {
+      background-color: darken(#348fe2, 2.5%);
+      border-color: transparent;
+      color: #fff;
+    }
+    &[disabled]{
+      background-color: #348fe2;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+  // sizes
+  &.is-small {
+    @include button-small;
+  }
+  // display
+  &.is-fullwidth {
+    display: flex;
+    width: 100%;
+  }
+  // styles
+  &.is-outlined {
+    background-color: transparent;
+    border-color: #348fe2;
+    color: #348fe2;
+    &:hover, &.is-hovered {
+      background-color: #348fe2;
+      border-color: #348fe2;
+      color: #fff;
+    }
+  }
+  &.is-rounded {
+    border-radius: 1000px;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }

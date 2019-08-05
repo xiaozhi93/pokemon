@@ -251,6 +251,15 @@ input[type="button"] {
   overflow: visible;
 }
 
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .f-w-100 {
   font-weight: 100;
 }
@@ -329,6 +338,21 @@ input[type="button"] {
   overflow: hidden !important;
 }
 
+.button,
+.input,
+.select {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+}
+
 .columns {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
@@ -345,10 +369,12 @@ input[type="button"] {
 
 .button {
   display: inline-block;
+  justify-content: center;
   padding: 4px 12px;
   border-color: #eee;
   border-width: 1px;
   border-radius: 3px;
+  background: #ffffff;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1.5;
@@ -360,4 +386,82 @@ input[type="button"] {
 .button:hover, .button.is-hovered {
   border-color: #999;
   color: #666;
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after {
+  position: absolute;
+  left: calc(50% - (1em / 2));
+  top: calc(50% - (1em / 2));
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #eee;
+  border-radius: 1000px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  position: absolute !important;
+}
+
+.button[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.button.is-primary {
+  background: #348fe2;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+  background-color: #2989e0;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary[disabled] {
+  background-color: #348fe2;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.button.is-small {
+  border-radius: 2px;
+  font-size: 11px;
+  height: 24px;
+  line-height: 16px;
+  padding: 3px 6px;
+}
+
+.button.is-fullwidth {
+  display: flex;
+  width: 100%;
+}
+
+.button.is-outlined {
+  background-color: transparent;
+  border-color: #348fe2;
+  color: #348fe2;
+}
+
+.button.is-outlined:hover, .button.is-outlined.is-hovered {
+  background-color: #348fe2;
+  border-color: #348fe2;
+  color: #fff;
+}
+
+.button.is-rounded {
+  border-radius: 1000px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
