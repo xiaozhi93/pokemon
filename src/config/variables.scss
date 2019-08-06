@@ -1,9 +1,9 @@
 // Colors
-$grey-darker: #222 !default;
-$grey-dark: #333 !default;
+$darker: #222 !default;
+$dark: #333 !default;
 $grey: #666 !default;
-$grey-light: #999 !default;
-$grey-lighter: #eee !default;
+$light: #999 !default;
+$lighter: #eee !default;
 
 $default: #b6c2c9 !default; // 灰色
 $primary: #348fe2 !default; // 蓝色
@@ -22,3 +22,6 @@ $textTitle: #000000 !default;
 $textTips: #b2b2b2 !default;
 $textWarning: $warning !default;
 $textGray: #999999 !default;
+
+// list
+$colors: $white $light $dark $black $primary $success $danger $warning;

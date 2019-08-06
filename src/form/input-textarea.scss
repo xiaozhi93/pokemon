@@ -1,0 +1,11 @@
+@mixin input-textarea {
+  
+}
+
+.input {
+  &.is-rounded {
+    border-radius: 1000px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

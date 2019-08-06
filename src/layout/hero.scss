@@ -1,0 +1,15 @@
+// main container
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  // sizes
+  &.is-fullheight {
+    min-height: 100vh;
+  }
+}
+
+// components
+
+// containers
