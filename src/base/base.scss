@@ -61,3 +61,8 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
 .button[disabled] {
   cursor: not-allowed;
 }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

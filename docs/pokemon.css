@@ -353,6 +353,11 @@ input[type="button"] {
   cursor: not-allowed;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .columns {
   display: flex;
   margin-left: -0.75rem;
@@ -743,4 +748,114 @@ table {
   overflow: auto;
   overflow-y: hidden;
   max-width: 100%;
+}
+
+.delete {
+  user-select: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.delete::after, .delete::before {
+  background: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.delete::before {
+  height: 2px;
+  width: 50%;
+}
+
+.delete::after {
+  height: 50%;
+  width: 2px;
+}
+
+.delete:hover, .delete:focus {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.delete:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.breadcrumb {
+  user-select: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.breadcrumb ul,
+.breadcrumb ol {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:first-child a {
+  padding-left: 0;
+}
+
+.breadcrumb li.is-active a {
+  color: #363636;
+  cursor: default;
+  pointer-events: none;
+}
+
+.breadcrumb li + li::before {
+  color: #b5b5b5;
+  content: "\0002f";
+}
+
+.breadcrumb a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  color: #3273dc;
+}
+
+.breadcrumb a:hover {
+  color: #363636;
+}
+
+.breadcrumb.is-centered ol,
+.breadcrumb.is-centered ul {
+  justify-content: center;
+}
+
+.breadcrumb.is-right ol,
+.breadcrumb.is-right ul {
+  justify-content: flex-end;
+}
+
+.breadcrumb.has-arrow-separator li + li::before {
+  content: "\02192";
 }

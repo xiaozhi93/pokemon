@@ -1,0 +1,67 @@
+@import "../utilities/mixins.scss";
+.breadcrumb {
+  @include unselectable;
+  font-size: 1rem;
+  white-space: nowrap;
+  ul,
+  ol {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+    &.is-active {
+      a {
+        color:#363636;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+    & + li {
+      &::before {
+        color: #b5b5b5;
+        content: "\0002f";
+      }
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    color: #3273dc;
+    &:hover {
+      color: #363636;
+    }
+  }
+  // sizes
+  &.is-medium {
+  }
+  // alignment
+  &.is-centered {
+    ol,
+    ul {
+      justify-content: center;
+    }
+  }
+  &.is-right {
+    ol,
+    ul {
+      justify-content: flex-end;
+    }
+  }
+  // 组件特有styles
+  &.has-arrow-separator {
+    li + li::before {
+      content: "\02192";
+    }
+  }
+}
