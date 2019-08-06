@@ -1,5 +1,6 @@
 $column-gap: 0.75rem !default;
 .columns {
+  display: flex;
   margin-left: (-$column-gap);
   margin-right: (-$column-gap);
   margin-top: (-$column-gap);
@@ -10,48 +11,71 @@ $column-gap: 0.75rem !default;
     margin-bottom: calc(1.5rem - #{$column-gap});
   }
   // Modifiers
-  // &.is-centered
-  //   justify-content: center
-  // &.is-gapless
-  //   margin-left: 0
-  //   margin-right: 0
-  //   margin-top: 0
-  //   & > .column
-  //     margin: 0
-  //     padding: 0 !important
-  //   &:not(:last-child)
-  //     margin-bottom: 1.5rem
-  //   &:last-child
-  //     margin-bottom: 0
-  // &.is-mobile
-  //   display: flex
-  // &.is-multiline
-  //   flex-wrap: wrap
-  // &.is-vcentered
-  //   align-items: center
-  // // Responsiveness
-  // +tablet
-  //   &:not(.is-desktop)
-  //     display: flex
-  // +desktop
-  //   // Modifiers
-  //   &.is-desktop
-  //     display: flex
+  &.is-centered {
+    justify-content: center
+  }
+  &.is-gapless {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    & > .column {
+      margin: 0;
+      padding: 0 !important;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &.is-multiline {
+    flex-wrap: wrap
+  }
+  &.is-vcentered {
+    align-items: center;
+  }
 }
-// .columns {
-//   &:not(:last-child) {
-//     margin-bottom: 20px;
-//   }
-//   &.is-grid {
-//     flex-wrap: wrap;
-//     & > .column {
-//       flex-basis: 33.3333%;
-//       max-width: 33.3333%;
-//       padding: 10px;
-//       width: 33.3333%;
-//       & + .column {
-//         margin-left: 0;
-//       }
-//     }
-//   }
-// }
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: $column-gap;
+    // Modifiers
+    &.is-narrow {
+      flex: none;
+    }
+    &.is-full {
+      flex: none;
+      width: 100%;
+    }
+    &.is-three-quarters {
+      flex: none;
+      width: 75%
+    }
+    &.is-two-thrid {
+      flex: none;
+      width: 66.6666%;
+    }
+    &.is-half {
+      flex: none;
+      width: 50%;
+    }
+    &.is-offset-three-quarters {
+      margin-left: 75%;
+    }
+    &.is-offset-two-thirds {
+      margin-left: 66.6666%;
+    }
+    &.is-offset-half {
+      margin-left: 50%;
+    }
+    // 12栅格
+    @for $i from 0 through 12 {
+      &.is-#{$i} {
+        flex: none;
+        width: percentage($i / 12);
+      }
+      &.is-offset-#{$i} {
+        margin-left: percentage($i / 12);
+      }
+    }
+}

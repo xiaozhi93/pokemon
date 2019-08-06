@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pokemon: A minimal css framework for web</title>
-    <link rel="stylesheet" href="./pokemon.css">
-    <link rel="stylesheet" href="./pokemon-docs.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./pokemon.css" />
+    <link rel="stylesheet" href="./pokemon-docs.css" />
+  </head>
+  <body>
     <header class="header">
       <div class="container">
         <div class="header-brand">
@@ -27,31 +27,224 @@
       </div>
     </header>
     <main class="main">
-        <div class="container">
-          <div class="docs-layout">
-            <div class="docs-content"></div>
-            <div class="docs-sidebar">
-              <nav id="categories" class="docs-categories">
-                <div class="docs-category">
-                  <header class="dosc-category-header">
-                    Components
-                  </header>
-                  <ul class="dosc-category-list">
-                      <li>Button</li>
-                      <button class="button">Button</button>
-                      <button class="button is-primary">Button</button>
-                      <button class="button is-primary" disabled>Button</button>
-                      <button class="button is-primary is-loading">Button</button>
-                      <button class="button is-small">Button</button>
-                      <button class="button is-fullwidth">Button</button>
-                      <button class="button is-outlined">Button</button>
-                      <button class="button is-rounded">Button</button>
-                    </ul>
+      <div class="container">
+        <div class="docs-layout">
+          <div class="docs-content">
+            <section>
+              <button class="button">Button</button>
+              <button class="button is-primary">Button</button>
+              <button class="button is-primary" disabled>Button</button>
+              <button class="button is-primary is-loading">Button</button>
+              <button class="button is-small">Button</button>
+              <button class="button is-fullwidth">Button</button>
+              <button class="button is-outlined">Button</button>
+              <button class="button is-rounded">Button</button>
+            </section>
+            <section>
+              <div class="columns">
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    1 column
+                  </p>
                 </div>
-              </nav>
-            </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 columnfasdfsadfsda
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-1">
+                  <p class="dosc-column-box is-primary">
+                    is-1
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 columnfasdfsadfsda
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-offset-4">
+                  <p class="dosc-column-box is-primary">
+                    is-offset-4
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 fajklsdjfksadjkflsadjfsdafsdaf
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns is-vcentered">
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    is-centered
+                  </p>
+                  <div class="columns">
+                    <div class="column">
+                      <p class="dosc-column-box is-primary">
+                        nested1
+                      </p>
+                    </div>
+                    <div class="column">
+                      <p class="dosc-column-box is-primary">
+                        nested2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table is-bordered">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                  <tr>
+                    <td>one11</td>
+                    <td>one21</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-container" style="width: 600px">
+                <table class="table is-fullwidth is-striped is-hoverable">
+                  <thead>
+                    <tr>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                    </tr>
+                    <tr>
+                      <td>one11</td>
+                      <td>one21</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+          <div class="docs-sidebar">
+            <nav id="categories" class="docs-categories">
+              <div class="docs-category">
+                <header class="dosc-category-header">
+                  Components
+                </header>
+                <ul class="dosc-category-list">
+                  <li>Button</li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

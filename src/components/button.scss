@@ -1,4 +1,5 @@
 @import "../config/variables.scss";
+@import "../utilities/mixins.scss";
 
 @mixin button-small {
   border-radius: 2px;

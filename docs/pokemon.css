@@ -354,6 +354,7 @@ input[type="button"] {
 }
 
 .columns {
+  display: flex;
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: -0.75rem;
@@ -365,6 +366,194 @@ input[type="button"] {
 
 .columns:not(:last-child) {
   margin-bottom: calc(1.5rem - 0.75rem);
+}
+
+.columns.is-centered {
+  justify-content: center;
+}
+
+.columns.is-gapless {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.columns.is-gapless > .column {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.columns.is-multiline {
+  flex-wrap: wrap;
+}
+
+.columns.is-vcentered {
+  align-items: center;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+}
+
+.column.is-narrow {
+  flex: none;
+}
+
+.column.is-full {
+  flex: none;
+  width: 100%;
+}
+
+.column.is-three-quarters {
+  flex: none;
+  width: 75%;
+}
+
+.column.is-two-thrid {
+  flex: none;
+  width: 66.6666%;
+}
+
+.column.is-half {
+  flex: none;
+  width: 50%;
+}
+
+.column.is-offset-three-quarters {
+  margin-left: 75%;
+}
+
+.column.is-offset-two-thirds {
+  margin-left: 66.6666%;
+}
+
+.column.is-offset-half {
+  margin-left: 50%;
+}
+
+.column.is-0 {
+  flex: none;
+  width: 0%;
+}
+
+.column.is-offset-0 {
+  margin-left: 0%;
+}
+
+.column.is-1 {
+  flex: none;
+  width: 8.33333%;
+}
+
+.column.is-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.column.is-2 {
+  flex: none;
+  width: 16.66667%;
+}
+
+.column.is-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.column.is-3 {
+  flex: none;
+  width: 25%;
+}
+
+.column.is-offset-3 {
+  margin-left: 25%;
+}
+
+.column.is-4 {
+  flex: none;
+  width: 33.33333%;
+}
+
+.column.is-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.column.is-5 {
+  flex: none;
+  width: 41.66667%;
+}
+
+.column.is-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.column.is-6 {
+  flex: none;
+  width: 50%;
+}
+
+.column.is-offset-6 {
+  margin-left: 50%;
+}
+
+.column.is-7 {
+  flex: none;
+  width: 58.33333%;
+}
+
+.column.is-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.column.is-8 {
+  flex: none;
+  width: 66.66667%;
+}
+
+.column.is-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.column.is-9 {
+  flex: none;
+  width: 75%;
+}
+
+.column.is-offset-9 {
+  margin-left: 75%;
+}
+
+.column.is-10 {
+  flex: none;
+  width: 83.33333%;
+}
+
+.column.is-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.column.is-11 {
+  flex: none;
+  width: 91.66667%;
+}
+
+.column.is-offset-11 {
+  margin-left: 91.66667%;
+}
+
+.column.is-12 {
+  flex: none;
+  width: 100%;
+}
+
+.column.is-offset-12 {
+  margin-left: 100%;
 }
 
 .button {
@@ -464,4 +653,94 @@ input[type="button"] {
   border-radius: 1000px;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  background: #fff;
+  color: #363636;
+}
+
+.table td,
+.table th {
+  border: solid 1px #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
+.table th {
+  color: #363636;
+}
+
+.table th:not([align]) {
+  text-align: left;
+}
+
+.table tr.is-selected {
+  background: #fafafa;
+  color: #363636;
+}
+
+.table tr.is-selected a,
+.table tr.is-selected strong {
+  color: currentColor;
+}
+
+.table tr.is-selected td,
+.table tr.is-selected th {
+  border-color: #fff;
+  color: currentColor;
+}
+
+.table thead {
+  background: transparent;
+}
+
+.table thead td,
+.table thead th {
+  border-width: 0 0 2px;
+  color: #363636;
+}
+
+.table tbody {
+  background-color: transparent;
+}
+
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.table.is-bordered td,
+.table.is-bordered th {
+  border-width: 1px;
+}
+
+.table.is-bordered tr:last-child td,
+.table.is-bordered tr:last-child th {
+  border-bottom-width: 1px;
+}
+
+.table.is-fullwidth {
+  width: 100%;
+}
+
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+  background-color: #fafafa;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table-container {
+  display: block;
+  overflow: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }
