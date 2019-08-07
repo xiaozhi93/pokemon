@@ -1,0 +1,22 @@
+@import "../config/variables.scss";
+@import "../utilities/mixins.scss";
+.select {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  // &:not(.is-multiple):not(.is-loading) {
+  &::after {
+    @extend %arrow;
+    border-color: $primary;
+    right: 1.125em;
+    z-index: 4;
+  } 
+  // }
+  select {
+    @extend %form-control;
+    cursor: pointer;
+    display: block;
+    outline: none;
+  }
+}

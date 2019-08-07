@@ -35,7 +35,7 @@
   color: $grey;
   // states
   &:hover, &.is-hovered {
-    border-color: $grey-light;
+    border-color: $light;
     color: $grey;
   }
   &.is-loading {

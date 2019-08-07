@@ -1,0 +1,53 @@
+%radio-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.radio {
+  @extend %radio-checkbox;
+  input[type="radio"] {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 1000px;
+    border: solid 1px #dbdbdb;
+    vertical-align: middle;
+    cursor: pointer;
+    &:focus {
+      border-color: darken(#dbdbdb, 1.2)
+    }
+    &:checked {
+      background-color: #3197EE;
+      box-shadow: inset 0 0 0 4px #fff;
+      border-color: #3197EE;
+    }
+  }
+}
+.checkbox {
+  @extend %radio-checkbox;
+  input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 2px;
+    border: solid 1px #dbdbdb;
+    vertical-align: middle;
+    cursor: pointer;
+    &:focus {
+      border-color: darken(#dbdbdb, 1.2)
+    }
+    &:checked {
+      background-color: #3197EE;
+      border-color: #3197EE;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../config/variables.scss";
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  padding: 0 0.7em;
+  background: $default;
+  color: #4a4a4a;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  // colors
+  @each $name, $color in $colors {
+    &.is-#{$name} {
+      background: #{$color};
+      color: #fff;
+    }
+  }
+  // sizes
+  // modifiers
+  &.is-rounded {
+    border-radius: 1000px;
+  }
+}

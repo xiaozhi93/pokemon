@@ -26,7 +26,22 @@
   position: relative;
   width: 1em;
 }
-
+@mixin arrow($color: transparent) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content:"";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid $color;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+%arrow {
+  @include arrow;
+}
 @mixin delete {
   @include unselectable;
   appearance: none;
@@ -75,6 +90,59 @@
 // 不能选择
 @mixin unselectable {
   user-select: none;
+}
+
+// 表单
+%form-focus-active {
+  &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active {
+    border-color: #3273dc;
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  }
+}
+%form-control {
+  @extend %form-focus-active;
+  &[read-only] {
+    box-shadow: none;
+  }
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+  // colors
+  @each $name, $color in $colors {
+    &.is-#{$name} {
+      border-color: #{$color};
+      &:focus,
+      &.is-focused,
+      &:active,
+      &.is-active {
+        box-shadow: 0 0 0 0.125em rgba($color, 0.25);
+      }
+    }
+  }
+  // sizes
+  // 组件 modifers
+  &.is-fullwidth {
+    display: block;
+    width: 100%;
+  }
+  &.is-inline {
+    display: inline-block;
+    width: auto;
+  }
 }
 // 响应式
 @mixin desktop {

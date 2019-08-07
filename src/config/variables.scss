@@ -1,11 +1,14 @@
 // Colors
+$white: #fff !default;
+$black: #000 !default;
+
 $darker: #222 !default;
 $dark: #333 !default;
 $grey: #666 !default;
 $light: #999 !default;
 $lighter: #eee !default;
 
-$default: #b6c2c9 !default; // 灰色
+$default: #f5f5f5 !default; // 灰色
 $primary: #348fe2 !default; // 蓝色
 $success:  #84b547 !default; // 绿色
 $danger: #ff5b57 !default; // 红色
@@ -24,4 +27,4 @@ $textWarning: $warning !default;
 $textGray: #999999 !default;
 
 // list
-$colors: $white $light $dark $black $primary $success $danger $warning;
+$colors: (white: $white, light: $light, dark:$dark, black:$black, primary: $primary, success: $success, danger: $danger, warning: $warning);
