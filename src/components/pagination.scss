@@ -1,0 +1,53 @@
+@import "../config/variables.scss";
+@import "../utilities/mixins.scss";
+.pagination {
+  font-size: 1rem;
+  margin: -0.25rem;
+  &.is-rounded {
+    .pagination-previous,.pagination-next,.pagination-link {
+      border-radius: 1000px;
+    }
+  }
+}
+.pagination,.pagination-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.pagination-list {
+  flex-wrap: wrap;
+}
+.pagination-previous,.pagination-next,.pagination-link,.pagination-ellipsis {
+  @extend %control;
+  @include unselectable;
+  margin: 0.25rem;
+  justify-content: center;
+  text-align: center;
+}
+.pagination-previous,.pagination-next,.pagination-link {
+  min-width: 2.25em;
+  border: solid 1px #dbdbdb;
+  color: #363636;
+  &:hover, &:focus {
+    border-color: #b5b5b5;
+    color: #363636;
+  }
+  &:active {
+    box-shadow: inset 0 1px 2px rgba($black, 0.2);
+  }
+  &[disabled] {
+    background-color: #dbdbdb;
+    border-color: #b5b5b5;
+    box-shadow: none;
+    color: #363636;
+    opacity: 0.5;
+  }
+}
+.pagination-link {
+  &.is-current {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+  }
+}

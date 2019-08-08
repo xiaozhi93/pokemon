@@ -144,6 +144,30 @@
     width: auto;
   }
 }
+
+@mixin control {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+  &:focus,&.is-focused, &:active, &.is-active {
+    outline: none;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+%control {
+  @include control;
+}
 // 响应式
 @mixin desktop {
   @media screen and (min-width: $desktop) {
