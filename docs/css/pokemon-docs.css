@@ -916,6 +916,48 @@ table {
   .tabs.is-toggle ul {
     border-bottom: none; }
 
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  vertical-align: top; }
+  .dropdown.is-active .dropdown-menu, .dropdown.is-hoverable:hover .dropdown-menu {
+    display: block; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 12rem;
+  z-index: 10;
+  padding-top: 4px; }
+
+.dropdown-content {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  padding: 0.5rem 0; }
+
+.dropdown-item {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.375rem 1rem;
+  white-space: nowrap; }
+  .dropdown-item:hover {
+    background: #f5f5f5;
+    color: #363636; }
+  .dropdown-item.is-active {
+    background: #348fe2;
+    color: #fff; }
+
+.dropdown-divider {
+  background: #dbdbdb;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 0.5rem 0; }
+
 .columns {
   display: flex;
   margin-left: -0.75rem;
