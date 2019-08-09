@@ -2128,3 +2128,100 @@ table {
   border-color: #348fe2;
   color: #fff;
 }
+
+.tabs {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabs a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-bottom: solid 1px #dbdbdb;
+  margin-bottom: -1px;
+  color: #363636;
+}
+
+.tabs a:hover {
+  border-bottom-color: #363636;
+  color: #363636;
+}
+
+.tabs ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.tabs li {
+  display: block;
+}
+
+.tabs li.is-active a {
+  border-bottom-color: #348fe2;
+  color: #348fe2;
+}
+
+.tabs.is-centered ul {
+  justify-content: center;
+}
+
+.tabs.is-right ul {
+  justify-content: flex-end;
+}
+
+.tabs.is-boxed a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.tabs.is-boxed a:hover {
+  background: #efefef;
+  border-bottom-color: #dbdbdb;
+}
+
+.tabs.is-boxed li.is-active a {
+  background: #fff;
+  border-color: #dbdbdb;
+  border-bottom-color: transparent;
+}
+
+.tabs.is-toggle a {
+  position: relative;
+  border: solid 1px #dbdbdb;
+  margin-bottom: 0;
+}
+
+.tabs.is-toggle a:hover {
+  background: #efefef;
+  border-color: #dbdbdb;
+}
+
+.tabs.is-toggle li + li a {
+  margin-left: -1px;
+}
+
+.tabs.is-toggle li:first-child a {
+  border-radius: 3px 0 0 3px;
+}
+
+.tabs.is-toggle li:last-child a {
+  border-radius: 0 3px 3px 0;
+}
+
+.tabs.is-toggle li.is-active a {
+  background: #348fe2;
+  border-color: #348fe2;
+  color: #fff;
+}
+
+.tabs.is-toggle ul {
+  border-bottom: none;
+}

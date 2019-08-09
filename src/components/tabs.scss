@@ -1,0 +1,107 @@
+@import "../config/variables.scss";
+.tabs {
+  display: flex;
+  align-items: stretch;
+  // justify-content: stretch;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-bottom: solid 1px #dbdbdb;
+    margin-bottom: -1px;
+    color: #363636;
+    &:hover {
+      border-bottom-color: #363636;
+      color: #363636;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex:1;
+    border-bottom: solid 1px #dbdbdb;
+  }
+  li {
+    display: block;
+    &.is-active {
+      a {
+        border-bottom-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+  // alignment
+  &.is-centered {
+    ul {
+      justify-content: center;
+    }
+  }
+  &.is-right {
+    ul {
+      justify-content: flex-end;
+    }
+  }
+  // styles
+  &.is-boxed {
+    a {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      &:hover {
+        background: #efefef;
+        border-bottom-color: #dbdbdb;
+      }
+    }
+    li {
+      &.is-active {
+        a {
+          background: #fff;
+          border-color: #dbdbdb;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  &.is-toggle {
+    a {
+      position: relative;
+      border: solid 1px #dbdbdb;
+      margin-bottom: 0;
+      &:hover {
+        background: #efefef;
+        border-color: #dbdbdb;
+      }
+    }
+    li {
+      & + li {
+        a {
+          margin-left: -1px;
+        }
+      }
+      &:first-child {
+        a {
+          border-radius: 3px 0 0 3px;
+        }
+      }
+      &:last-child {
+        a {
+          border-radius: 0 3px 3px 0;
+        }
+      }
+      &.is-active {
+        a {
+          background: $primary;
+          border-color: $primary;
+          color: #fff;
+        }
+      }
+    }
+    ul {
+      border-bottom: none;
+    }
+  }
+}
