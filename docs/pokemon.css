@@ -1,3 +1,149 @@
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid transparent;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input, .textarea, .select select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.input[read-only], .textarea[read-only], .select select[read-only] {
+  box-shadow: none;
+}
+
+.is-white.input, .is-white.textarea, .select select.is-white {
+  border-color: #fff;
+}
+
+.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.is-light.input, .is-light.textarea, .select select.is-light {
+  border-color: #999;
+}
+
+.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
+}
+
+.is-dark.input, .is-dark.textarea, .select select.is-dark {
+  border-color: #333;
+}
+
+.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
+}
+
+.is-black.input, .is-black.textarea, .select select.is-black {
+  border-color: #000;
+}
+
+.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+
+.is-primary.input, .is-primary.textarea, .select select.is-primary {
+  border-color: #348fe2;
+}
+
+.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
+}
+
+.is-success.input, .is-success.textarea, .select select.is-success {
+  border-color: #84b547;
+}
+
+.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
+}
+
+.is-danger.input, .is-danger.textarea, .select select.is-danger {
+  border-color: #ff5b57;
+}
+
+.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
+}
+
+.is-warning.input, .is-warning.textarea, .select select.is-warning {
+  border-color: #f59c1a;
+}
+
+.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
+}
+
+.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.is-inline.input, .is-inline.textarea, .select select.is-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
 html,
 body,
 body div,
@@ -251,150 +397,24 @@ input[type="button"] {
   overflow: visible;
 }
 
-@keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.select::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  content: "";
-  border-top: 0;
-  border-left: 0;
-  border: 3px solid transparent;
-  transform: rotate(-45deg);
-  transform-style: center;
-}
-
-.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-}
-
-.input, .textarea, .select select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.25em;
-  padding: 0.375em 0.625em;
+.button,
+.input,
+.select {
+  border: 1px solid transparent;
   border-radius: 4px;
-  border: solid 1px transparent;
-  border-color: #dbdbdb;
-  font-size: 1rem;
-  line-height: 1.5;
+  box-shadow: none;
+  outline: none;
+  position: relative;
   vertical-align: top;
 }
 
-.input[read-only], .textarea[read-only], .select select[read-only] {
-  box-shadow: none;
-}
-
-.is-white.input, .is-white.textarea, .select select.is-white {
-  border-color: #fff;
-}
-
-.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
-}
-
-.is-light.input, .is-light.textarea, .select select.is-light {
-  border-color: #999;
-}
-
-.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
-  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
-}
-
-.is-dark.input, .is-dark.textarea, .select select.is-dark {
-  border-color: #333;
-}
-
-.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
-  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
-}
-
-.is-black.input, .is-black.textarea, .select select.is-black {
-  border-color: #000;
-}
-
-.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
-  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
-}
-
-.is-primary.input, .is-primary.textarea, .select select.is-primary {
-  border-color: #348fe2;
-}
-
-.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
-  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
-}
-
-.is-success.input, .is-success.textarea, .select select.is-success {
-  border-color: #84b547;
-}
-
-.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
-  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
-}
-
-.is-danger.input, .is-danger.textarea, .select select.is-danger {
-  border-color: #ff5b57;
-}
-
-.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
-}
-
-.is-warning.input, .is-warning.textarea, .select select.is-warning {
-  border-color: #f59c1a;
-}
-
-.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
-  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
-}
-
-.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
-  display: block;
-  width: 100%;
-}
-
-.is-inline.input, .is-inline.textarea, .select select.is-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: none;
-}
-
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
-  outline: none;
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+.button[disabled] {
   cursor: not-allowed;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .f-w-100 {
@@ -473,26 +493,6 @@ input[type="button"] {
 
 .is-clipped {
   overflow: hidden !important;
-}
-
-.button,
-.input,
-.select {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  box-shadow: none;
-  outline: none;
-  position: relative;
-  vertical-align: top;
-}
-
-.button[disabled] {
-  cursor: not-allowed;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .box {
@@ -757,7 +757,7 @@ a.box:active {
   width: auto;
 }
 
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
   appearance: none;
   -webkit-appearance: none;
   position: relative;
@@ -772,11 +772,546 @@ a.box:active {
   box-shadow: none;
 }
 
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
   outline: none;
 }
 
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
+.button {
+  justify-content: center;
+  padding: 4px 12px;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  color: #666;
+}
+
+.button:hover, .button.is-hovered {
+  border-color: #999;
+  color: #666;
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after {
+  position: absolute;
+  left: calc(50% - (1em / 2));
+  top: calc(50% - (1em / 2));
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #eee;
+  border-radius: 1000px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  position: absolute !important;
+}
+
+.button[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.button.is-primary {
+  background: #348fe2;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+  background-color: #2989e0;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary[disabled] {
+  background-color: #348fe2;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.button.is-small {
+  border-radius: 2px;
+  font-size: 11px;
+  height: 24px;
+  line-height: 16px;
+  padding: 3px 6px;
+}
+
+.button.is-fullwidth {
+  display: flex;
+  width: 100%;
+}
+
+.button.is-outlined {
+  background-color: transparent;
+  border-color: #348fe2;
+  color: #348fe2;
+}
+
+.button.is-outlined:hover, .button.is-outlined.is-hovered {
+  background-color: #348fe2;
+  border-color: #348fe2;
+  color: #fff;
+}
+
+.button.is-rounded {
+  border-radius: 1000px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  background: #fff;
+  color: #363636;
+}
+
+.table td,
+.table th {
+  border: solid 1px #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
+.table th {
+  color: #363636;
+}
+
+.table th:not([align]) {
+  text-align: left;
+}
+
+.table tr.is-selected {
+  background: #fafafa;
+  color: #363636;
+}
+
+.table tr.is-selected a,
+.table tr.is-selected strong {
+  color: currentColor;
+}
+
+.table tr.is-selected td,
+.table tr.is-selected th {
+  border-color: #fff;
+  color: currentColor;
+}
+
+.table thead {
+  background: transparent;
+}
+
+.table thead td,
+.table thead th {
+  border-width: 0 0 2px;
+  color: #363636;
+}
+
+.table tbody {
+  background-color: transparent;
+}
+
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.table.is-bordered td,
+.table.is-bordered th {
+  border-width: 1px;
+}
+
+.table.is-bordered tr:last-child td,
+.table.is-bordered tr:last-child th {
+  border-bottom-width: 1px;
+}
+
+.table.is-fullwidth {
+  width: 100%;
+}
+
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+  background-color: #fafafa;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table-container {
+  display: block;
+  overflow: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon.is-small {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon.is-medium {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon.is-large {
+  width: 2rem;
+  height: 2rem;
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid transparent;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input, .textarea, .select select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.input[read-only], .textarea[read-only], .select select[read-only] {
+  box-shadow: none;
+}
+
+.is-white.input, .is-white.textarea, .select select.is-white {
+  border-color: #fff;
+}
+
+.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.is-light.input, .is-light.textarea, .select select.is-light {
+  border-color: #999;
+}
+
+.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
+}
+
+.is-dark.input, .is-dark.textarea, .select select.is-dark {
+  border-color: #333;
+}
+
+.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
+}
+
+.is-black.input, .is-black.textarea, .select select.is-black {
+  border-color: #000;
+}
+
+.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+
+.is-primary.input, .is-primary.textarea, .select select.is-primary {
+  border-color: #348fe2;
+}
+
+.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
+}
+
+.is-success.input, .is-success.textarea, .select select.is-success {
+  border-color: #84b547;
+}
+
+.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
+}
+
+.is-danger.input, .is-danger.textarea, .select select.is-danger {
+  border-color: #ff5b57;
+}
+
+.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
+}
+
+.is-warning.input, .is-warning.textarea, .select select.is-warning {
+  border-color: #f59c1a;
+}
+
+.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
+}
+
+.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.is-inline.input, .is-inline.textarea, .select select.is-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
+.delete {
+  user-select: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.delete::after, .delete::before {
+  background: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.delete::before {
+  height: 2px;
+  width: 50%;
+}
+
+.delete::after {
+  height: 50%;
+  width: 2px;
+}
+
+.delete:hover, .delete:focus {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.delete:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid transparent;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input, .textarea, .select select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.input[read-only], .textarea[read-only], .select select[read-only] {
+  box-shadow: none;
+}
+
+.is-white.input, .is-white.textarea, .select select.is-white {
+  border-color: #fff;
+}
+
+.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.is-light.input, .is-light.textarea, .select select.is-light {
+  border-color: #999;
+}
+
+.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
+}
+
+.is-dark.input, .is-dark.textarea, .select select.is-dark {
+  border-color: #333;
+}
+
+.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
+}
+
+.is-black.input, .is-black.textarea, .select select.is-black {
+  border-color: #000;
+}
+
+.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+
+.is-primary.input, .is-primary.textarea, .select select.is-primary {
+  border-color: #348fe2;
+}
+
+.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
+}
+
+.is-success.input, .is-success.textarea, .select select.is-success {
+  border-color: #84b547;
+}
+
+.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
+}
+
+.is-danger.input, .is-danger.textarea, .select select.is-danger {
+  border-color: #ff5b57;
+}
+
+.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
+}
+
+.is-warning.input, .is-warning.textarea, .select select.is-warning {
+  border-color: #f59c1a;
+}
+
+.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
+}
+
+.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.is-inline.input, .is-inline.textarea, .select select.is-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
   cursor: not-allowed;
 }
 
@@ -928,7 +1463,7 @@ a.box:active {
   width: auto;
 }
 
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
   appearance: none;
   -webkit-appearance: none;
   position: relative;
@@ -943,11 +1478,11 @@ a.box:active {
   box-shadow: none;
 }
 
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
   outline: none;
 }
 
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
   cursor: not-allowed;
 }
 
@@ -1021,6 +1556,493 @@ a.box:active {
 .checkbox input[type="checkbox"]:checked {
   background-color: #3197EE;
   border-color: #3197EE;
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid transparent;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input, .textarea, .select select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.input[read-only], .textarea[read-only], .select select[read-only] {
+  box-shadow: none;
+}
+
+.is-white.input, .is-white.textarea, .select select.is-white {
+  border-color: #fff;
+}
+
+.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.is-light.input, .is-light.textarea, .select select.is-light {
+  border-color: #999;
+}
+
+.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
+}
+
+.is-dark.input, .is-dark.textarea, .select select.is-dark {
+  border-color: #333;
+}
+
+.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
+}
+
+.is-black.input, .is-black.textarea, .select select.is-black {
+  border-color: #000;
+}
+
+.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+
+.is-primary.input, .is-primary.textarea, .select select.is-primary {
+  border-color: #348fe2;
+}
+
+.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
+}
+
+.is-success.input, .is-success.textarea, .select select.is-success {
+  border-color: #84b547;
+}
+
+.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
+}
+
+.is-danger.input, .is-danger.textarea, .select select.is-danger {
+  border-color: #ff5b57;
+}
+
+.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
+}
+
+.is-warning.input, .is-warning.textarea, .select select.is-warning {
+  border-color: #f59c1a;
+}
+
+.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
+}
+
+.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.is-inline.input, .is-inline.textarea, .select select.is-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
+.breadcrumb {
+  user-select: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.breadcrumb ul,
+.breadcrumb ol {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:first-child a {
+  padding-left: 0;
+}
+
+.breadcrumb li.is-active a {
+  color: #363636;
+  cursor: default;
+  pointer-events: none;
+}
+
+.breadcrumb li + li::before {
+  color: #b5b5b5;
+  content: "\0002f";
+}
+
+.breadcrumb a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  color: #3273dc;
+}
+
+.breadcrumb a:hover {
+  color: #363636;
+}
+
+.breadcrumb.is-centered ol,
+.breadcrumb.is-centered ul {
+  justify-content: center;
+}
+
+.breadcrumb.is-right ol,
+.breadcrumb.is-right ul {
+  justify-content: flex-end;
+}
+
+.breadcrumb.has-arrow-separator li + li::before {
+  content: "\02192";
+}
+
+.select::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0.625em;
+  height: 0.625em;
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border: 3px solid transparent;
+  transform: rotate(-45deg);
+  transform-style: center;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input, .textarea, .select select {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.25em;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  border-color: #dbdbdb;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.input[read-only], .textarea[read-only], .select select[read-only] {
+  box-shadow: none;
+}
+
+.is-white.input, .is-white.textarea, .select select.is-white {
+  border-color: #fff;
+}
+
+.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.is-light.input, .is-light.textarea, .select select.is-light {
+  border-color: #999;
+}
+
+.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
+}
+
+.is-dark.input, .is-dark.textarea, .select select.is-dark {
+  border-color: #333;
+}
+
+.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
+}
+
+.is-black.input, .is-black.textarea, .select select.is-black {
+  border-color: #000;
+}
+
+.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+
+.is-primary.input, .is-primary.textarea, .select select.is-primary {
+  border-color: #348fe2;
+}
+
+.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
+}
+
+.is-success.input, .is-success.textarea, .select select.is-success {
+  border-color: #84b547;
+}
+
+.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
+}
+
+.is-danger.input, .is-danger.textarea, .select select.is-danger {
+  border-color: #ff5b57;
+}
+
+.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
+}
+
+.is-warning.input, .is-warning.textarea, .select select.is-warning {
+  border-color: #f59c1a;
+}
+
+.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
+}
+
+.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.is-inline.input, .is-inline.textarea, .select select.is-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.button, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.375em 0.625em;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: none;
+}
+
+.button:focus, .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.button, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .button:active, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.button, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled], .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
+.pagination {
+  font-size: 1rem;
+  margin: -0.25rem;
+}
+
+.pagination.is-rounded .pagination-previous, .pagination.is-rounded .pagination-next, .pagination.is-rounded .pagination-link {
+  border-radius: 1000px;
+}
+
+.pagination, .pagination-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pagination-list {
+  flex-wrap: wrap;
+}
+
+.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  user-select: none;
+  margin: 0.25rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.pagination-previous, .pagination-next, .pagination-link {
+  min-width: 2.25em;
+  border: solid 1px #dbdbdb;
+  color: #363636;
+}
+
+.pagination-previous:hover, .pagination-previous:focus, .pagination-next:hover, .pagination-next:focus, .pagination-link:hover, .pagination-link:focus {
+  border-color: #b5b5b5;
+  color: #363636;
+}
+
+.pagination-previous:active, .pagination-next:active, .pagination-link:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] {
+  background-color: #dbdbdb;
+  border-color: #b5b5b5;
+  box-shadow: none;
+  color: #363636;
+  opacity: 0.5;
+}
+
+.pagination-link.is-current {
+  background-color: #348fe2;
+  border-color: #348fe2;
+  color: #fff;
+}
+
+.tabs {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabs a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-bottom: solid 1px #dbdbdb;
+  margin-bottom: -1px;
+  color: #363636;
+}
+
+.tabs a:hover {
+  border-bottom-color: #363636;
+  color: #363636;
+}
+
+.tabs ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.tabs li {
+  display: block;
+}
+
+.tabs li.is-active a {
+  border-bottom-color: #348fe2;
+  color: #348fe2;
+}
+
+.tabs.is-centered ul {
+  justify-content: center;
+}
+
+.tabs.is-right ul {
+  justify-content: flex-end;
+}
+
+.tabs.is-boxed a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.tabs.is-boxed a:hover {
+  background: #efefef;
+  border-bottom-color: #dbdbdb;
+}
+
+.tabs.is-boxed li.is-active a {
+  background: #fff;
+  border-color: #dbdbdb;
+  border-bottom-color: transparent;
+}
+
+.tabs.is-toggle a {
+  position: relative;
+  border: solid 1px #dbdbdb;
+  margin-bottom: 0;
+}
+
+.tabs.is-toggle a:hover {
+  background: #efefef;
+  border-color: #dbdbdb;
+}
+
+.tabs.is-toggle li + li a {
+  margin-left: -1px;
+}
+
+.tabs.is-toggle li:first-child a {
+  border-radius: 3px 0 0 3px;
+}
+
+.tabs.is-toggle li:last-child a {
+  border-radius: 0 3px 3px 0;
+}
+
+.tabs.is-toggle li.is-active a {
+  background: #348fe2;
+  border-color: #348fe2;
+  color: #fff;
+}
+
+.tabs.is-toggle ul {
+  border-bottom: none;
 }
 
 .columns {
@@ -1224,1004 +2246,4 @@ a.box:active {
 
 .column.is-offset-12 {
   margin-left: 100%;
-}
-
-.select::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  content: "";
-  border-top: 0;
-  border-left: 0;
-  border: 3px solid transparent;
-  transform: rotate(-45deg);
-  transform-style: center;
-}
-
-.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-}
-
-.input, .textarea, .select select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.25em;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  border-color: #dbdbdb;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: top;
-}
-
-.input[read-only], .textarea[read-only], .select select[read-only] {
-  box-shadow: none;
-}
-
-.is-white.input, .is-white.textarea, .select select.is-white {
-  border-color: #fff;
-}
-
-.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
-}
-
-.is-light.input, .is-light.textarea, .select select.is-light {
-  border-color: #999;
-}
-
-.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
-  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
-}
-
-.is-dark.input, .is-dark.textarea, .select select.is-dark {
-  border-color: #333;
-}
-
-.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
-  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
-}
-
-.is-black.input, .is-black.textarea, .select select.is-black {
-  border-color: #000;
-}
-
-.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
-  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
-}
-
-.is-primary.input, .is-primary.textarea, .select select.is-primary {
-  border-color: #348fe2;
-}
-
-.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
-  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
-}
-
-.is-success.input, .is-success.textarea, .select select.is-success {
-  border-color: #84b547;
-}
-
-.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
-  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
-}
-
-.is-danger.input, .is-danger.textarea, .select select.is-danger {
-  border-color: #ff5b57;
-}
-
-.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
-}
-
-.is-warning.input, .is-warning.textarea, .select select.is-warning {
-  border-color: #f59c1a;
-}
-
-.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
-  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
-}
-
-.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
-  display: block;
-  width: 100%;
-}
-
-.is-inline.input, .is-inline.textarea, .select select.is-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: none;
-}
-
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
-  outline: none;
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
-  cursor: not-allowed;
-}
-
-.button {
-  display: inline-block;
-  justify-content: center;
-  padding: 4px 12px;
-  border-color: #eee;
-  border-width: 1px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  white-space: nowrap;
-  color: #666;
-}
-
-.button:hover, .button.is-hovered {
-  border-color: #999;
-  color: #666;
-}
-
-.button.is-loading {
-  color: transparent !important;
-  pointer-events: none;
-}
-
-.button.is-loading::after {
-  position: absolute;
-  left: calc(50% - (1em / 2));
-  top: calc(50% - (1em / 2));
-  animation: spinAround 500ms infinite linear;
-  border: 2px solid #eee;
-  border-radius: 1000px;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 1em;
-  position: relative;
-  width: 1em;
-  position: absolute !important;
-}
-
-.button[disabled] {
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 0.5;
-}
-
-.button.is-primary {
-  background: #348fe2;
-  border-color: transparent;
-  color: #fff;
-}
-
-.button.is-primary:hover, .button.is-primary.is-hovered {
-  background-color: #2989e0;
-  border-color: transparent;
-  color: #fff;
-}
-
-.button.is-primary[disabled] {
-  background-color: #348fe2;
-  border-color: transparent;
-  box-shadow: none;
-}
-
-.button.is-small {
-  border-radius: 2px;
-  font-size: 11px;
-  height: 24px;
-  line-height: 16px;
-  padding: 3px 6px;
-}
-
-.button.is-fullwidth {
-  display: flex;
-  width: 100%;
-}
-
-.button.is-outlined {
-  background-color: transparent;
-  border-color: #348fe2;
-  color: #348fe2;
-}
-
-.button.is-outlined:hover, .button.is-outlined.is-hovered {
-  background-color: #348fe2;
-  border-color: #348fe2;
-  color: #fff;
-}
-
-.button.is-rounded {
-  border-radius: 1000px;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.table {
-  background: #fff;
-  color: #363636;
-}
-
-.table td,
-.table th {
-  border: solid 1px #dbdbdb;
-  border-width: 0 0 1px;
-  padding: 0.5em 0.75em;
-  vertical-align: top;
-}
-
-.table th {
-  color: #363636;
-}
-
-.table th:not([align]) {
-  text-align: left;
-}
-
-.table tr.is-selected {
-  background: #fafafa;
-  color: #363636;
-}
-
-.table tr.is-selected a,
-.table tr.is-selected strong {
-  color: currentColor;
-}
-
-.table tr.is-selected td,
-.table tr.is-selected th {
-  border-color: #fff;
-  color: currentColor;
-}
-
-.table thead {
-  background: transparent;
-}
-
-.table thead td,
-.table thead th {
-  border-width: 0 0 2px;
-  color: #363636;
-}
-
-.table tbody {
-  background-color: transparent;
-}
-
-.table tbody tr:last-child td,
-.table tbody tr:last-child th {
-  border-bottom-width: 0;
-}
-
-.table.is-bordered td,
-.table.is-bordered th {
-  border-width: 1px;
-}
-
-.table.is-bordered tr:last-child td,
-.table.is-bordered tr:last-child th {
-  border-bottom-width: 1px;
-}
-
-.table.is-fullwidth {
-  width: 100%;
-}
-
-.table.is-hoverable tbody tr:not(.is-selected):hover {
-  background-color: #fafafa;
-}
-
-.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
-  background-color: #fafafa;
-}
-
-.table-container {
-  display: block;
-  overflow: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-}
-
-.select::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  content: "";
-  border-top: 0;
-  border-left: 0;
-  border: 3px solid transparent;
-  transform: rotate(-45deg);
-  transform-style: center;
-}
-
-.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-}
-
-.input, .textarea, .select select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.25em;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  border-color: #dbdbdb;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: top;
-}
-
-.input[read-only], .textarea[read-only], .select select[read-only] {
-  box-shadow: none;
-}
-
-.is-white.input, .is-white.textarea, .select select.is-white {
-  border-color: #fff;
-}
-
-.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
-}
-
-.is-light.input, .is-light.textarea, .select select.is-light {
-  border-color: #999;
-}
-
-.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
-  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
-}
-
-.is-dark.input, .is-dark.textarea, .select select.is-dark {
-  border-color: #333;
-}
-
-.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
-  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
-}
-
-.is-black.input, .is-black.textarea, .select select.is-black {
-  border-color: #000;
-}
-
-.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
-  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
-}
-
-.is-primary.input, .is-primary.textarea, .select select.is-primary {
-  border-color: #348fe2;
-}
-
-.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
-  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
-}
-
-.is-success.input, .is-success.textarea, .select select.is-success {
-  border-color: #84b547;
-}
-
-.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
-  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
-}
-
-.is-danger.input, .is-danger.textarea, .select select.is-danger {
-  border-color: #ff5b57;
-}
-
-.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
-}
-
-.is-warning.input, .is-warning.textarea, .select select.is-warning {
-  border-color: #f59c1a;
-}
-
-.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
-  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
-}
-
-.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
-  display: block;
-  width: 100%;
-}
-
-.is-inline.input, .is-inline.textarea, .select select.is-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: none;
-}
-
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
-  outline: none;
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
-  cursor: not-allowed;
-}
-
-.delete {
-  user-select: none;
-  appearance: none;
-  background: rgba(0, 0, 0, 0.2);
-  border: none;
-  outline: none;
-  border-radius: 1000px;
-  cursor: pointer;
-  pointer-events: auto;
-  display: inline-block;
-  flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 0;
-  position: relative;
-  vertical-align: top;
-  width: 20px;
-  height: 20px;
-  max-height: 20px;
-  max-width: 20px;
-}
-
-.delete::after, .delete::before {
-  background: #fff;
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transform-origin: center center;
-}
-
-.delete::before {
-  height: 2px;
-  width: 50%;
-}
-
-.delete::after {
-  height: 50%;
-  width: 2px;
-}
-
-.delete:hover, .delete:focus {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.delete:active {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.select::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  content: "";
-  border-top: 0;
-  border-left: 0;
-  border: 3px solid transparent;
-  transform: rotate(-45deg);
-  transform-style: center;
-}
-
-.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-}
-
-.input, .textarea, .select select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.25em;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  border-color: #dbdbdb;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: top;
-}
-
-.input[read-only], .textarea[read-only], .select select[read-only] {
-  box-shadow: none;
-}
-
-.is-white.input, .is-white.textarea, .select select.is-white {
-  border-color: #fff;
-}
-
-.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
-}
-
-.is-light.input, .is-light.textarea, .select select.is-light {
-  border-color: #999;
-}
-
-.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
-  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
-}
-
-.is-dark.input, .is-dark.textarea, .select select.is-dark {
-  border-color: #333;
-}
-
-.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
-  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
-}
-
-.is-black.input, .is-black.textarea, .select select.is-black {
-  border-color: #000;
-}
-
-.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
-  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
-}
-
-.is-primary.input, .is-primary.textarea, .select select.is-primary {
-  border-color: #348fe2;
-}
-
-.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
-  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
-}
-
-.is-success.input, .is-success.textarea, .select select.is-success {
-  border-color: #84b547;
-}
-
-.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
-  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
-}
-
-.is-danger.input, .is-danger.textarea, .select select.is-danger {
-  border-color: #ff5b57;
-}
-
-.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
-}
-
-.is-warning.input, .is-warning.textarea, .select select.is-warning {
-  border-color: #f59c1a;
-}
-
-.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
-  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
-}
-
-.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
-  display: block;
-  width: 100%;
-}
-
-.is-inline.input, .is-inline.textarea, .select select.is-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: none;
-}
-
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
-  outline: none;
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
-  cursor: not-allowed;
-}
-
-.breadcrumb {
-  user-select: none;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-
-.breadcrumb ul,
-.breadcrumb ol {
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb li:first-child a {
-  padding-left: 0;
-}
-
-.breadcrumb li.is-active a {
-  color: #363636;
-  cursor: default;
-  pointer-events: none;
-}
-
-.breadcrumb li + li::before {
-  color: #b5b5b5;
-  content: "\0002f";
-}
-
-.breadcrumb a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem;
-  color: #3273dc;
-}
-
-.breadcrumb a:hover {
-  color: #363636;
-}
-
-.breadcrumb.is-centered ol,
-.breadcrumb.is-centered ul {
-  justify-content: center;
-}
-
-.breadcrumb.is-right ol,
-.breadcrumb.is-right ul {
-  justify-content: flex-end;
-}
-
-.breadcrumb.has-arrow-separator li + li::before {
-  content: "\02192";
-}
-
-.select::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  content: "";
-  border-top: 0;
-  border-left: 0;
-  border: 3px solid transparent;
-  transform: rotate(-45deg);
-  transform-style: center;
-}
-
-.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-}
-
-.input, .textarea, .select select {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.25em;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  border-color: #dbdbdb;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: top;
-}
-
-.input[read-only], .textarea[read-only], .select select[read-only] {
-  box-shadow: none;
-}
-
-.is-white.input, .is-white.textarea, .select select.is-white {
-  border-color: #fff;
-}
-
-.is-white.input:focus, .is-white.textarea:focus, .select select.is-white:focus, .is-white.is-focused.input, .is-white.is-focused.textarea, .select select.is-white.is-focused, .is-white.input:active, .is-white.textarea:active, .select select.is-white:active, .is-white.is-active.input, .is-white.is-active.textarea, .select select.is-white.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
-}
-
-.is-light.input, .is-light.textarea, .select select.is-light {
-  border-color: #999;
-}
-
-.is-light.input:focus, .is-light.textarea:focus, .select select.is-light:focus, .is-light.is-focused.input, .is-light.is-focused.textarea, .select select.is-light.is-focused, .is-light.input:active, .is-light.textarea:active, .select select.is-light:active, .is-light.is-active.input, .is-light.is-active.textarea, .select select.is-light.is-active {
-  box-shadow: 0 0 0 0.125em rgba(153, 153, 153, 0.25);
-}
-
-.is-dark.input, .is-dark.textarea, .select select.is-dark {
-  border-color: #333;
-}
-
-.is-dark.input:focus, .is-dark.textarea:focus, .select select.is-dark:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .select select.is-dark.is-focused, .is-dark.input:active, .is-dark.textarea:active, .select select.is-dark:active, .is-dark.is-active.input, .is-dark.is-active.textarea, .select select.is-dark.is-active {
-  box-shadow: 0 0 0 0.125em rgba(51, 51, 51, 0.25);
-}
-
-.is-black.input, .is-black.textarea, .select select.is-black {
-  border-color: #000;
-}
-
-.is-black.input:focus, .is-black.textarea:focus, .select select.is-black:focus, .is-black.is-focused.input, .is-black.is-focused.textarea, .select select.is-black.is-focused, .is-black.input:active, .is-black.textarea:active, .select select.is-black:active, .is-black.is-active.input, .is-black.is-active.textarea, .select select.is-black.is-active {
-  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
-}
-
-.is-primary.input, .is-primary.textarea, .select select.is-primary {
-  border-color: #348fe2;
-}
-
-.is-primary.input:focus, .is-primary.textarea:focus, .select select.is-primary:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .select select.is-primary.is-focused, .is-primary.input:active, .is-primary.textarea:active, .select select.is-primary:active, .is-primary.is-active.input, .is-primary.is-active.textarea, .select select.is-primary.is-active {
-  box-shadow: 0 0 0 0.125em rgba(52, 143, 226, 0.25);
-}
-
-.is-success.input, .is-success.textarea, .select select.is-success {
-  border-color: #84b547;
-}
-
-.is-success.input:focus, .is-success.textarea:focus, .select select.is-success:focus, .is-success.is-focused.input, .is-success.is-focused.textarea, .select select.is-success.is-focused, .is-success.input:active, .is-success.textarea:active, .select select.is-success:active, .is-success.is-active.input, .is-success.is-active.textarea, .select select.is-success.is-active {
-  box-shadow: 0 0 0 0.125em rgba(132, 181, 71, 0.25);
-}
-
-.is-danger.input, .is-danger.textarea, .select select.is-danger {
-  border-color: #ff5b57;
-}
-
-.is-danger.input:focus, .is-danger.textarea:focus, .select select.is-danger:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .select select.is-danger.is-focused, .is-danger.input:active, .is-danger.textarea:active, .select select.is-danger:active, .is-danger.is-active.input, .is-danger.is-active.textarea, .select select.is-danger.is-active {
-  box-shadow: 0 0 0 0.125em rgba(255, 91, 87, 0.25);
-}
-
-.is-warning.input, .is-warning.textarea, .select select.is-warning {
-  border-color: #f59c1a;
-}
-
-.is-warning.input:focus, .is-warning.textarea:focus, .select select.is-warning:focus, .is-warning.is-focused.input, .is-warning.is-focused.textarea, .select select.is-warning.is-focused, .is-warning.input:active, .is-warning.textarea:active, .select select.is-warning:active, .is-warning.is-active.input, .is-warning.is-active.textarea, .select select.is-warning.is-active {
-  box-shadow: 0 0 0 0.125em rgba(245, 156, 26, 0.25);
-}
-
-.is-fullwidth.input, .is-fullwidth.textarea, .select select.is-fullwidth {
-  display: block;
-  width: 100%;
-}
-
-.is-inline.input, .is-inline.textarea, .select select.is-inline {
-  display: inline-block;
-  width: auto;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.375em 0.625em;
-  border-radius: 4px;
-  border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: none;
-}
-
-.pagination-previous:focus, .pagination-next:focus, .pagination-link:focus, .pagination-ellipsis:focus, .is-focused.pagination-previous, .is-focused.pagination-next, .is-focused.pagination-link, .is-focused.pagination-ellipsis, .pagination-previous:active, .pagination-next:active, .pagination-link:active, .pagination-ellipsis:active, .is-active.pagination-previous, .is-active.pagination-next, .is-active.pagination-link, .is-active.pagination-ellipsis {
-  outline: none;
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled], .pagination-ellipsis[disabled] {
-  cursor: not-allowed;
-}
-
-.pagination {
-  font-size: 1rem;
-  margin: -0.25rem;
-}
-
-.pagination.is-rounded .pagination-previous, .pagination.is-rounded .pagination-next, .pagination.is-rounded .pagination-link {
-  border-radius: 1000px;
-}
-
-.pagination, .pagination-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.pagination-list {
-  flex-wrap: wrap;
-}
-
-.pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
-  user-select: none;
-  margin: 0.25rem;
-  justify-content: center;
-  text-align: center;
-}
-
-.pagination-previous, .pagination-next, .pagination-link {
-  min-width: 2.25em;
-  border: solid 1px #dbdbdb;
-  color: #363636;
-}
-
-.pagination-previous:hover, .pagination-previous:focus, .pagination-next:hover, .pagination-next:focus, .pagination-link:hover, .pagination-link:focus {
-  border-color: #b5b5b5;
-  color: #363636;
-}
-
-.pagination-previous:active, .pagination-next:active, .pagination-link:active {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] {
-  background-color: #dbdbdb;
-  border-color: #b5b5b5;
-  box-shadow: none;
-  color: #363636;
-  opacity: 0.5;
-}
-
-.pagination-link.is-current {
-  background-color: #348fe2;
-  border-color: #348fe2;
-  color: #fff;
-}
-
-.tabs {
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.tabs a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5em 1em;
-  border-bottom: solid 1px #dbdbdb;
-  margin-bottom: -1px;
-  color: #363636;
-}
-
-.tabs a:hover {
-  border-bottom-color: #363636;
-  color: #363636;
-}
-
-.tabs ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 1;
-  border-bottom: solid 1px #dbdbdb;
-}
-
-.tabs li {
-  display: block;
-}
-
-.tabs li.is-active a {
-  border-bottom-color: #348fe2;
-  color: #348fe2;
-}
-
-.tabs.is-centered ul {
-  justify-content: center;
-}
-
-.tabs.is-right ul {
-  justify-content: flex-end;
-}
-
-.tabs.is-boxed a {
-  border: 1px solid transparent;
-  border-radius: 3px;
-}
-
-.tabs.is-boxed a:hover {
-  background: #efefef;
-  border-bottom-color: #dbdbdb;
-}
-
-.tabs.is-boxed li.is-active a {
-  background: #fff;
-  border-color: #dbdbdb;
-  border-bottom-color: transparent;
-}
-
-.tabs.is-toggle a {
-  position: relative;
-  border: solid 1px #dbdbdb;
-  margin-bottom: 0;
-}
-
-.tabs.is-toggle a:hover {
-  background: #efefef;
-  border-color: #dbdbdb;
-}
-
-.tabs.is-toggle li + li a {
-  margin-left: -1px;
-}
-
-.tabs.is-toggle li:first-child a {
-  border-radius: 3px 0 0 3px;
-}
-
-.tabs.is-toggle li:last-child a {
-  border-radius: 0 3px 3px 0;
-}
-
-.tabs.is-toggle li.is-active a {
-  background: #348fe2;
-  border-color: #348fe2;
-  color: #fff;
-}
-
-.tabs.is-toggle ul {
-  border-bottom: none;
 }

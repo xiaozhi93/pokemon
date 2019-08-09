@@ -1,8 +1,10 @@
 @charset "utf-8";
 
-@import "./config/variables.scss";
-@import "./utilities/utilities.scss";
-@import "./base/base.scss";
+// 入口文件导入变量，混合，函数，其他全局使用，extend使用多少次打包多少次，入口文件导入一个就行
+@import "./theme/all.scss";
+@import "./utilities/all.scss";
+@import "./base/all.scss";
 @import "./elements/all.scss";
 @import "./form/all.scss";
-@import "./components/components.scss";
+@import "./components/all.scss";
+@import "./layout/all.scss";

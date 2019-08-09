@@ -1,4 +1,4 @@
-@import "../config/variables.scss";
+@import "../theme/all.scss";
 @import "../utilities/mixins.scss";
 
 @mixin button-small {
@@ -20,10 +20,10 @@
 }
 // 基础
 .button {
-  display: inline-block;
+  @extend %control;
   justify-content: center;
   padding: 4px 12px;
-  border-color: $lighter;
+  border-color: #dbdbdb;
   border-width: 1px;
   border-radius: 3px;
   background: #ffffff;

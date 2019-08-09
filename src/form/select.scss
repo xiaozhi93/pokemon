@@ -1,4 +1,4 @@
-@import "../config/variables.scss";
+@import "../theme/all.scss";
 @import "../utilities/mixins.scss";
 .select {
   position: relative;
@@ -7,7 +7,7 @@
   vertical-align: top;
   // &:not(.is-multiple):not(.is-loading) {
   &::after {
-    @extend %arrow;
+    @extend %arrow;  // 多个地方引入编译多次
     border-color: $primary;
     right: 1.125em;
     z-index: 4;
