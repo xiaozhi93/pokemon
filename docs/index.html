@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pokemon: A minimal css framework for H5</title>
-    <link rel="stylesheet" href="./pokemon.css" />
-    <link rel="stylesheet" href="./pokemon-docs.css" />
+    <title>Pokemon: A minimal css framework for web</title>
+    <link rel="stylesheet" href="./css/pokemon-docs.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
-
   <body>
     <header class="header">
       <div class="container">
@@ -20,23 +19,438 @@
             <span class="header-logo-title">Pokemon</span>
           </a>
         </div>
-        <div class="header-desc">
-          Pokemon是一套基础的css框架
+        <div class="header-nav">
+          <a href="" class="button is-primary">
+            Github
+          </a>
         </div>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <ul>
-          <li>
-            <header class="category-header">
-              <p>基础组件</p>
-            </header>
-            <ul class="category-list">
-              <li>Button</li>
-            </ul>
-          </li>
-        </ul>
+        <div class="docs-layout">
+          <div class="docs-content">
+            <section>
+              <button class="button">Button</button>
+              <button class="button is-primary">Button</button>
+              <button class="button is-primary" disabled>Button</button>
+              <button class="button is-primary is-loading">Button</button>
+              <button class="button is-small">Button</button>
+              <button class="button is-fullwidth">Button</button>
+              <button class="button is-outlined">Button</button>
+              <button class="button is-rounded">Button</button>
+            </section>
+            <section>
+              <div class="columns">
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    1 column123
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 columnfasdfsadfsda
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-1">
+                  <p class="dosc-column-box is-primary">
+                    is-1
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 columnfasdfsadfsda
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-offset-4">
+                  <p class="dosc-column-box is-primary">
+                    is-offset-4
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    3 fajklsdjfksadjkflsadjfsdafsdaf
+                  </p>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    4 column
+                  </p>
+                </div>
+              </div>
+              <div class="columns is-vcentered">
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    is-centered
+                  </p>
+                  <div class="columns">
+                    <div class="column">
+                      <p class="dosc-column-box is-primary">
+                        nested1
+                      </p>
+                    </div>
+                    <div class="column">
+                      <p class="dosc-column-box is-primary">
+                        nested2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <p class="dosc-column-box is-primary">
+                    2
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table is-bordered">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr>
+                    <th>one</th>
+                    <th>two</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>one1</td>
+                    <td>one2</td>
+                  </tr>
+                  <tr>
+                    <td>one11</td>
+                    <td>one21</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-container" style="width: 600px">
+                <table class="table is-fullwidth is-striped is-hoverable">
+                  <thead>
+                    <tr>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                      <th>one</th>
+                      <th>two</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                    </tr>
+                    <tr>
+                      <td>one11</td>
+                      <td>one21</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                      <td>one1</td>
+                      <td>one2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section>
+              <a class="delete"></a>
+            </section>
+            <section>
+              <nav class="breadcrumb">
+                <ul>
+                  <li><a href="#">Pokemon</a></li>
+                  <li><a href="#">Component</a></li>
+                  <li class="is-active"><a href="#">BreadCrumb</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section>
+              <div class="box">
+                我是一个盒子
+              </div>
+              <a class="box">
+                我是一个可链接盒子
+              </a>
+            </section>
+            <section>
+              <input type="text" class="input" placeholder="block input" />
+              <input
+                type="text"
+                class="input is-inline"
+                placeholder="inline input"
+              />
+              <input
+                type="text"
+                class="input is-inline is-primary"
+                placeholder="primary input"
+              />
+              <input
+                type="text"
+                class="input is-inline is-danger"
+                placeholder="danger input"
+              />
+              <input
+                type="text"
+                class="input is-rounded"
+                placeholder="inline input"
+              />
+            </section>
+            <section>
+              <textarea class="textarea"></textarea>
+              <textarea class="textarea is-primary"></textarea>
+            </section>
+            <section>
+              <div class="select">
+                <select>
+                  <option value="1">苹果</option>
+                  <option value="2">香蕉</option>
+                  <option value="3">梨</option>
+                </select>
+              </div>
+            </section>
+            <section>
+              <label class="radio">
+                <input type="radio">
+                <span>radio</span>
+              </label>
+              <label class="radio">
+                <input type="radio">
+                <span>radio</span>
+              </label>
+              <label class="radio">
+                <input type="radio">
+                <span>radio</span>
+              </label>
+              <label class="radio">
+                <input type="radio">
+                <span>radio</span>
+              </label>
+            </section>
+            <section>
+              <label class="checkbox">
+                <input type="checkbox">
+                <span>checkbox</span>
+              </label>
+            </section>
+            <section>
+              <span class="tag">Tag</span>
+              <span class="tag is-primary">Tag</span>
+              <span class="tag is-primary is-large">Tag</span>
+              <span class="tag is-rounded">Tag</span>
+              <span class="tag is-success">Tag <button class="delete"></button></span>
+              <div class="tags">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="tags is-centered">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="tags is-right">
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+                <span class="tag">Tag</span>
+              </div>
+              <div class="tags has-addons">
+                <span class="tag is-danger">Tag</span>
+                <span class="tag is-primary">Tag</span>
+              </div>
+            </section>
+            <section>
+              <i class="fas fa-home"></i>
+            </section>
+            <section>
+              <nav class="pagination">
+                <ul class="pagination-list">
+                  <li><a href="" class="pagination-previous"><</a></li>
+                  <li><a href="" class="pagination-link">1</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a href="" class="pagination-link is-current">3</a></li>
+                  <li><a href="" class="pagination-link">4</a></li>
+                  <li><a href="" class="pagination-next">></a></li>
+                </ul>
+              </nav>
+              <nav class="pagination is-rounded">
+                <ul class="pagination-list">
+                  <li><a href="" class="pagination-previous"><</a></li>
+                  <li><a href="" class="pagination-link">1</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a href="" class="pagination-link is-current">3</a></li>
+                  <li><a href="" class="pagination-link">4</a></li>
+                  <li><a href="" class="pagination-next">></a></li>
+                </ul>
+              </nav>
+            </section>
+            <section>
+              <div class="tabs">
+                <ul>
+                  <li class="is-active"><a href="#">图片</a></li>
+                  <li><a href="#">音乐</a></li>
+                  <li><a href="#">视频</a></li>
+                  <li><a href="#">文档</a></li>
+                </ul>
+              </div>
+              <div class="tabs is-centered">
+                <ul>
+                  <li class="is-active"><a href="#">图片</a></li>
+                  <li><a href="#">音乐</a></li>
+                  <li><a href="#">视频</a></li>
+                  <li><a href="#">文档</a></li>
+                </ul>
+              </div>
+              <div class="tabs is-boxed">
+                <ul>
+                  <li class="is-active"><a href="#">图片</a></li>
+                  <li><a href="#">音乐</a></li>
+                  <li><a href="#">视频</a></li>
+                  <li><a href="#">文档</a></li>
+                </ul>
+              </div>
+              <div class="tabs is-toggle">
+                <ul>
+                  <li class="is-active"><a href="#">图片</a></li>
+                  <li><a href="#">音乐</a></li>
+                  <li><a href="#">视频</a></li>
+                  <li><a href="#">文档</a></li>
+                </ul>
+              </div>
+            </section>
+            <section>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button">
+                    <span>
+                      Dropdown button
+                    </span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-content">
+                    
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <aside class="menu">
+                <ul class="menu-list">
+                  <li><a href="">Dashboard</a></li>
+                  <li><a href="">Customers</a></li>
+                </ul>
+              </aside>
+            </section>
+          </div>
+          <div class="docs-sidebar">
+            <nav id="categories" class="docs-categories">
+              <div class="docs-category">
+                <header class="dosc-category-header">
+                  Components
+                </header>
+                <ul class="dosc-category-list">
+                  <li>Button</li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
     </main>
   </body>
