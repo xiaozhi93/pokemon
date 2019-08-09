@@ -1,0 +1,8 @@
+.progress {
+  appearance: none;
+  border: none;
+  border-radius: 1000px;
+  &::-webkit-progress-bar {
+    background: hsl(0, 1%, 71%)
+  }
+}
