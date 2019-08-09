@@ -1,6 +1,3 @@
-@import "../theme/all.scss";
-@import "../utilities/mixins.scss";
-
 .input {
   @extend %form-control;
   width: 100%;
