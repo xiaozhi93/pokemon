@@ -2,29 +2,51 @@
 $white: #fff !default;
 $black: #000 !default;
 
-$darker: #222 !default;
-$dark: #333 !default;
-$grey: #666 !default;
-$light: #999 !default;
-$lighter: #eee !default;
+$darker: #363636 !default;
+$dark: #7a7a7a !default;
+$grey: #b5b5b5 !default;
+$light: #fafafa !default;
+$lighter: #dbdbdb !default;
 
-$default: #f5f5f5 !default; // 灰色
 $primary: #348fe2 !default; // 蓝色
+$info: #2db7f5 !default; // 信息
 $success:  #84b547 !default; // 绿色
 $danger: #ff5b57 !default; // 红色
 $warning: #f59c1a !default; // 橙色
 
+
+// $family-primary:  BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radium-rounded: 1000px !default;
+
 // Responsive
-$full: 1200px !default;
-$desktop: 980px !default; // 桌面宽度
-$tablet: 770px !default;
+// $full: 1200px !default;
+// $desktop: 980px !default; // 桌面宽度
+// $tablet: 770px !default;
 
 
-// text
-$textTitle: #000000 !default;
-$textTips: #b2b2b2 !default;
-$textWarning: $warning !default;
-$textGray: #999999 !default;
+$border-color: $lighter !default;
+$background-color:$light !default;
+$text-color:$dark !default;
+$text-strong-color:$darker !default;
+$text-light-color:$grey !default;
+$divider-color: $lighter;
+
+
+$link: $primary !default;
+
 
 // list
 $colors: (white: $white, light: $light, dark:$dark, black:$black, primary: $primary, success: $success, danger: $danger, warning: $warning);
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default

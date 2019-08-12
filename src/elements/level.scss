@@ -1,0 +1,33 @@
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .level-left, .level-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    .level-item {
+      &.is-flexable {
+        flex-grow: 1;
+      }
+    }
+  }
+  .level-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .level-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .level-item {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}

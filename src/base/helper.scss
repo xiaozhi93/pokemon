@@ -4,15 +4,29 @@
 // 字体
 $fontWeights: 100 200 300 400 500 600;
 @each $fontWeight in $fontWeights {
-  .f-w-#{$fontWeight} {
+  .has-text-weight-#{$fontWeight} {
     font-weight: #{$fontWeight};
   }
 }
-$fontSizes: 12px 12px 16px 18px 20px 22px 24px 26px 28px 30px 32px 34px 36px;
-$textAligns: left center right;
-.text-center {
-  text-align: center;
+$fontSizes: 12px 16px 18px 20px 22px 24px 26px 28px 30px 32px 34px 36px;
+@each $fontsize in $fontSizes {
+  .is-size-#{$fontsize} {
+    font-size: #{$fontsize};
+  }
 }
+$textAligns: ('left' : 'left', 'centered': 'center', 'right': 'right', 'justified': 'justify');
+@each $name, $alignment in $textAligns {
+  .has-text-#{$name} {
+    text-align: #{$alignment}
+  }
+}
+$textTransform: lowercase uppercase capitalize !default;
+@each $transform in $textTransform {
+  .has-text-#{$transform} {
+    text-transform: #{$transform}
+  }
+}
+
 // 布局
 .is-clearfix {
   @include clearfix;
@@ -28,11 +42,13 @@ $textAligns: left center right;
 }
 $positions: "fixed sticky relative absolute static";
 @each $position in $positions {
-  .is-position-#{$position} {
+  .is-#{$position} {
     position: #{$position} !important;
   }
 }
-
+.is-overlay {
+  @extend %overlay;
+}
 // 模块
 $displays: "block" "flex" "inline" "inline-block" "inline-flex";
 @each $display in $displays {
@@ -47,3 +63,25 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
   overflow: hidden !important;
 }
 // 盒模型
+.is-marginless {
+  margin: 0 !important;
+}
+.is-paddingless {
+  padding: 0 !important;
+}
+.is-borderless {
+  border: none !important;
+}
+.is-radiusless {
+  border-radius: none !important;
+}
+
+// 颜色
+@each $name,$color in $colors {
+  .has-text-#{name} {
+    color: #{$color}
+  }
+  .has-background-#{name} {
+    background: #{$color}
+  }
+}

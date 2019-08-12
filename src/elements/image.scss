@@ -1,3 +1,4 @@
+$dimensions: 16 24 32 48 64 96 128 !default;
 .image {
   display: block;
   position: relative;
@@ -5,5 +6,51 @@
     display: block;
     width: 100%;
     height: auto;
+    &.is-rounded {
+      border-radius: 1000px;
+    }
+  }
+  &.is-fullwidth {
+    width: 100%;
+  }
+  // 比例
+  &.is-square,
+  &.is-1by1,
+  &.is-5by4,
+  &.is-4by3,
+  &.is-3by2,
+  &.is-5by3,
+  &.is-16by9,
+  &.is-2by1,
+  &.is-3by1,
+  &.is-4by5,
+  &.is-3by4,
+  &.is-3by5 {
+    img,
+    .has-ratio {
+      @extend %overlay;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &.is-square,
+  &.is-1by1 {
+    padding-top: 100%;
+  }
+  &.is-5by4 {
+    padding: 80%;
+  }
+  &.is-4by3 {
+    padding-top: 75%;
+  }
+  &.is-4by5 {
+    padding-top: 125%;
+  }
+  // 大小
+  @each $dimension in $dimensions {
+    &.is-#{$dimension}x#{$dimension} {
+      width: $dimension * 1px;
+      height: $dimension * 1px;
+    }
   }
 }
