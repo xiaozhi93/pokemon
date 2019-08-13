@@ -29,9 +29,9 @@ section {
     padding:3rem 0 3rem 1.5rem;
   }
   .docs-sidebar {
-    position: relative;
-    padding:3rem 0 3rem 1.5rem;
-    // background: #ededed;
+    position: sticky;
+    top: 0;
+    padding:3rem 1.5rem 3rem 0;   
   }
 }
 .dosc-column-box {

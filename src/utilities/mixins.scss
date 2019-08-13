@@ -40,6 +40,10 @@
 %arrow {
   @include arrow;
 }
+// 不能选择
+@mixin unselectable {
+  user-select: none;
+}
 @mixin delete {
   @include unselectable;
   appearance: none;
@@ -85,9 +89,8 @@
   }
   // size
 }
-// 不能选择
-@mixin unselectable {
-  user-select: none;
+%delete {
+  @include delete;
 }
 
 // 表单

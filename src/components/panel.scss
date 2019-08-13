@@ -1,0 +1,43 @@
+.panel {
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
+.panel-header, .panel-tabs,.panel-block {
+  border: solid 1px #dbdbdb;
+  border-top: none;
+  &:first-child {
+    border-top: solid 1px #dbdbdb;
+  }
+}
+.panel-header {
+  padding: 0.75em 1em;
+  background: $background-color;
+  border-radius: 4px 4px 0 0;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.panel-tabs {
+  display: flex;
+  justify-content: center;
+  a {
+    border-bottom: solid 1px transparent;
+    margin-bottom: -1px;
+    padding: 0.5em;
+    &.is-active {
+      border-bottom-color: $primary;
+      color: $text-color;
+    }
+  }
+
+}
+.panel-block {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5em 0.75em;
+  align-items: center;
+  &.is-active {
+    border-left-color: $primary;
+  }
+}

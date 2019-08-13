@@ -1,0 +1,48 @@
+.message {
+  display: block;
+  background: $background-color;
+  strong {
+    color: currentColor
+  }
+  @each $name, $color in $colors {
+    &.is-#{$name} {
+      background-color: lighten($color, 43%);
+      .message-header {
+        background: #{$color};
+        color: #fff;
+      }
+      .message-body {
+        border-color: #{$color}
+      }
+    }
+  }
+}
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.75em 1em;
+  background-color: #4a4a4a;
+  border-radius: $radius $radius 0 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+  & + .message-body {
+    border-width: 0;
+  }
+}
+.message-body {
+  padding: 1.25em 1.5em;
+  border-style: solid;
+  border-color: $border-color;
+  border-left-width: 4px;
+  border-radius: 0 0 $radius $radius;
+  code,
+  pre {
+    background: $white;
+  }
+  pre code {
+    background-color: transparent;
+  }
+}
