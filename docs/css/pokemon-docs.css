@@ -485,7 +485,7 @@ a {
 .is-clearfix::after {
   clear: both;
   content: "";
-  display: "block"; }
+  display: block; }
 
 .is-pulled-none {
   float: none !important; }
@@ -1489,6 +1489,11 @@ table {
   .panel-block.is-active {
     border-left-color: #348fe2; }
 
+.menu-group {
+  margin-bottom: 1.25rem; }
+  .menu-group:last-child {
+    margin-bottom: 0; }
+
 .menu-group-title {
   font-size: 1.25rem;
   text-transform: capitalize; }
@@ -1750,10 +1755,11 @@ section {
     flex: 1;
     padding: 3rem 0 3rem 1.5rem; }
   .docs-layout .docs-sidebar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     padding: 3rem 1.5rem 3rem 0; }
+    .docs-layout .docs-sidebar .menu {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0; }
 
 .dosc-column-box {
   position: relative;
@@ -1767,6 +1773,3 @@ section {
   .dosc-column-box.is-primary {
     background: #348fe2;
     color: #fff; }
-
-.docs-layout .table {
-  margin-bottom: 1rem; }

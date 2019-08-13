@@ -34,7 +34,7 @@
     </nav>
     <main class="main">
       <div class="container">
-        <div class="docs-layout">
+        <div class="docs-layout is-clearfix">
           <div class="docs-sidebar">
             <nav id="categories" class="menu">
               <div class="menu-group">
@@ -42,26 +42,29 @@
                   Elements
                 </div>
                 <ul class="menu-list">
-                  <li class="menu-item is-active">
-                    <a href="#">Box</a>
+                  <li class="menu-item">
+                    <a href="#box">Box</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Button</a>
+                    <a href="#button">Button</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Icon</a>
+                    <a href="#icon">Icon</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Image</a>
+                    <a href="#image">Image</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Media</a>
+                    <a href="#media">Media</a>
                   </li>
                   <li class="menu-item">
                     <a href="#">Notification</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Progress</a>
+                    <a href="#progress">Progress</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#table">Table</a>
                   </li>
                 </ul>
               </div>
@@ -70,20 +73,20 @@
                   Forms
                 </div>
                 <ul class="menu-list">
-                  <li class="menu-item is-active">
-                    <a href="#">Input</a>
+                  <li class="menu-item">
+                    <a href="#input">Input</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Textarea</a>
+                    <a href="#textarea">Textarea</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Select</a>
+                    <a href="#select">Select</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Radio</a>
+                    <a href="#radio">Radio</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Checkbox</a>
+                    <a href="#checkbox">Checkbox</a>
                   </li>
                 </ul>
               </div>
@@ -92,24 +95,24 @@
                   Components
                 </div>
                 <ul class="menu-list">
-                  <li class="menu-item is-active">
-                    <a href="#">Breadcrumb</a>
+                  <li class="menu-item">
+                    <a href="#breadcrumb">Breadcrumb</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Card</a>
+                    <a href="#card">Card</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Collapse</a>
+                    <a href="#collapse">Collapse</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Dropdown</a>
+                    <a href="#dropdown">Dropdown</a>
                   </li>
                 </ul>
               </div>
             </nav>
           </div>
           <div class="docs-content">
-            <section>
+            <section id="button">
               <button class="button">Button</button>
               <button class="button is-primary">Button</button>
               <button class="button is-primary" disabled>Button</button>
@@ -119,7 +122,7 @@
               <button class="button is-outlined">Button</button>
               <button class="button is-rounded">Button</button>
             </section>
-            <section>
+            <section id="column">
               <div class="columns">
                 <div class="column">
                   <p class="dosc-column-box is-primary">
@@ -211,7 +214,7 @@
                 </div>
               </div>
             </section>
-            <section>
+            <section id="table">
               <table class="table">
                 <thead>
                   <tr>
@@ -309,10 +312,10 @@
                 </table>
               </div>
             </section>
-            <section>
+            <section id="other">
               <a class="delete"></a>
             </section>
-            <section>
+            <section id="breadcrumb">
               <nav class="breadcrumb">
                 <ul>
                   <li><a href="#">Pokemon</a></li>
@@ -321,7 +324,7 @@
                 </ul>
               </nav>
             </section>
-            <section>
+            <section id="box">
               <div class="box">
                 我是一个盒子
               </div>
@@ -329,7 +332,7 @@
                 我是一个可链接盒子
               </a>
             </section>
-            <section>
+            <section id="input">
               <input type="text" class="input" placeholder="block input" />
               <input
                 type="text"
@@ -352,11 +355,11 @@
                 placeholder="inline input"
               />
             </section>
-            <section>
+            <section id="textarea">
               <textarea class="textarea"></textarea>
               <textarea class="textarea is-primary"></textarea>
             </section>
-            <section>
+            <section id="select">
               <div class="select">
                 <select>
                   <option value="1">苹果</option>
@@ -365,7 +368,7 @@
                 </select>
               </div>
             </section>
-            <section>
+            <section id="radio">
               <label class="radio">
                 <input type="radio" />
                 <span>radio</span>
@@ -383,13 +386,13 @@
                 <span>radio</span>
               </label>
             </section>
-            <section>
+            <section id="checkbox">
               <label class="checkbox">
                 <input type="checkbox" />
                 <span>checkbox</span>
               </label>
             </section>
-            <section>
+            <section id="tag">
               <span class="tag">Tag</span>
               <span class="tag is-primary">Tag</span>
               <span class="tag is-primary is-large">Tag</span>
@@ -432,10 +435,10 @@
                 <span class="tag is-primary">Tag</span>
               </div>
             </section>
-            <section>
+            <section id="icon">
               <i class="fas fa-home"></i>
             </section>
-            <section>
+            <section id="pagination">
               <nav class="pagination">
                 <ul class="pagination-list">
                   <li><a href="" class="pagination-previous"><</a></li>
@@ -457,7 +460,7 @@
                 </ul>
               </nav>
             </section>
-            <section>
+            <section id="tabs">
               <div class="tabs">
                 <ul>
                   <li class="is-active"><a href="#">图片</a></li>
@@ -491,7 +494,7 @@
                 </ul>
               </div>
             </section>
-            <section>
+            <section id="dropdown">
               <div class="dropdown is-hoverable">
                 <div class="dropdown-trigger">
                   <button class="button">
@@ -515,7 +518,7 @@
                 </div>
               </div>
             </section>
-            <section>
+            <section id="menu">
               <aside class="menu">
                 <ul class="menu-list">
                   <li><a href="">Dashboard</a></li>
@@ -523,7 +526,7 @@
                 </ul>
               </aside>
             </section>
-            <section>
+            <section id="notification">
               <div class="notification is-primary">
                 <button class="delete"></button>
                 前端可以从多个角度理解，比如规范、框架、语言、社区、场景以及整条研发链路。
@@ -535,10 +538,10 @@
                 >。
               </div>
             </section>
-            <section>
+            <section id="progress">
               <progress class="progress" value="85" max="100">85%</progress>
             </section>
-            <section>
+            <section id="image">
               <figure class="image is-96x96">
                 <img
                   src="https://bulma.io/images/placeholders/128x128.png"
@@ -561,7 +564,7 @@
                 </figure>
               </div>
             </section>
-            <section>
+            <section id="card">
               <div class="card">
                 <div class="card-header">
                   <div class="card-header-title">card</div>
@@ -576,7 +579,7 @@
                 </div>
               </div>
             </section>
-            <section>
+            <section id="media">
               <article class="media">
                 <figure class="media-left">
                   <p class="image is-64x64">
@@ -768,7 +771,7 @@
                 </div>
               </div>
             </section> -->
-            <section>
+            <section id="message">
               <div class="message">
                 <div class="message-header">
                   <p>Hello</p>
@@ -817,7 +820,7 @@
                 </div>
               </div>
             </section>
-            <section>
+            <section id="panel">
               <div class="panel">
                 <p class="panel-header">面板头</p>
                 <div class="panel-tabs">

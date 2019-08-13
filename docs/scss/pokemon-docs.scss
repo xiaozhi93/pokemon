@@ -21,7 +21,6 @@ section {
   width: 100%;
   max-width: 1344px;
 }
-
 .docs-layout {
   display: flex;
   .docs-content {
@@ -29,9 +28,11 @@ section {
     padding:3rem 0 3rem 1.5rem;
   }
   .docs-sidebar {
-    position: sticky;
-    top: 0;
-    padding:3rem 1.5rem 3rem 0;   
+    padding:3rem 1.5rem 3rem 0;
+    .menu {
+      position: sticky;  // 父元素不能flex布局
+      top: 0;
+    }
   }
 }
 .dosc-column-box {
@@ -47,8 +48,4 @@ section {
     background: #348fe2;
     color: #fff;
   }
-}
-
-.docs-layout .table {
-  margin-bottom: 1rem;
 }
