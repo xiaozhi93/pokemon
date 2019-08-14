@@ -68,14 +68,14 @@ $column-gap: 0.75rem !default;
     &.is-offset-half {
       margin-left: 50%;
     }
-    // 12栅格
-    @for $i from 0 through 12 {
+    // 24栅格
+    @for $i from 0 through 24 {
       &.is-#{$i} {
         flex: none;
-        width: percentage($i / 12);
+        width: percentage($i / 24);
       }
       &.is-offset-#{$i} {
-        margin-left: percentage($i / 12);
+        margin-left: percentage($i / 24);
       }
     }
 }

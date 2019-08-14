@@ -1,3 +1,19 @@
 .container {
-  padding: 10px;
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  flex-grow: 1;
+  @include desktop {
+    max-width: $desktop - 32px;
+  }
+  @include widescreen {
+    max-width: $widescreen - 32px;
+  }
+  .is-fluid {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

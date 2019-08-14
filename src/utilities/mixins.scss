@@ -180,9 +180,3 @@
 %overlay {
   @include overlay;
 }
-// 响应式
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
-    @content
-  }
-}

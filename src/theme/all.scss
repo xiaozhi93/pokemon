@@ -1,18 +1,17 @@
 // Colors
-$white: #fff !default;
 $black: #000 !default;
-
 $darker: #363636 !default;
 $dark: #7a7a7a !default;
 $grey: #b5b5b5 !default;
 $light: #fafafa !default;
 $lighter: #dbdbdb !default;
+$white: #fff !default;
 
-$primary: #348fe2 !default; // 蓝色
-$info: #2db7f5 !default; // 信息
-$success:  #84b547 !default; // 绿色
-$danger: #ff5b57 !default; // 红色
-$warning: #f59c1a !default; // 橙色
+$primary: #348fe2 !default;
+$info: #2db7f5 !default; 
+$success:  #84b547 !default;
+$danger: #ff5b57 !default; 
+$warning: #f59c1a !default;
 
 
 // $family-primary:  BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
@@ -31,9 +30,9 @@ $radius-large: 6px !default;
 $radium-rounded: 1000px !default;
 
 // Responsive
-// $full: 1200px !default;
-// $desktop: 980px !default; // 桌面宽度
-// $tablet: 770px !default;
+$widescreen: 1216px !default;
+$desktop: 1024px !default; // 桌面宽度
+$tablet: 768px !default;
 
 
 $border-color: $lighter !default;
@@ -48,5 +47,5 @@ $link: $primary !default;
 
 
 // list
-$colors: (white: $white, light: $light, dark:$dark, black:$black, primary: $primary, success: $success, danger: $danger, warning: $warning);
+$colors: (light: $light, dark:$dark, primary: $primary, success: $success, info: $info, danger: $danger, warning: $warning);
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default

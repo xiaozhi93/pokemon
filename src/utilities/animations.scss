@@ -6,3 +6,11 @@
     transform: rotate(359deg)
   }
 }
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
