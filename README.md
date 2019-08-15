@@ -231,3 +231,70 @@ Pokemon is a minimal css framework for web
   - 组件化
   - 规范化
   - 自动化
+
+
+  # js标准库   ecmascript标准内置对象（global）及及浏览器层面的webApi
+
+
+  # 早期的JavaScript诞生设计思路
+  - 借鉴C语言的基本语法；
+  - 借鉴Java语言的数据类型和内存管理；
+  - 借鉴Scheme语言，将函数提升到"第一等公民"（first class）的地位；
+  - 借鉴Self语言，使用基于原型（prototype）的继承机制。
+
+
+  # Dom编程
+  HTML是描述网页的一个语言，html不是编程语言，是一个标记语言-超文本标记语言；标记语言是一套标记标签，HTML使用标记标签（html标签）描述网页；HTML标签定义HTML文档内容；Html文档描述网页，Html文档包含HTML标签和纯文本，HTML文档也被称为网页。
+  Css层叠样式表定义如何显示HTML元素，为了解决内容与表现分离的问题，多个样式可以层叠为一个。
+  DOM是Html与xml文档的编程接口；html Dom定义了访问和操作html文档的标准方法；DOM以树结构表达HTML文档（HTML文档在浏览器中以DOM树结构呈现）。HTML文档如何通过浏览器渲染成DOM树。DOM(html文档的编程接口)一直在升级变化。
+  DOM 0级
+  规定了一套文档对象，集合，方法和属性
+  DOM 1级规范
+  有两个子规范组成
+  DOM Core
+  DOM HTML
+
+  DOM 2级规范
+  由6个子规范组成
+  DOM2 Core
+  DOM2 HTML
+  DOM2 EVent
+  DOM2 Style
+  DOM2 Traversal和DOM2 Range
+
+  DOM 3级规范
+  由3个子规范组成
+  DOM3 Core
+  DOM3 Load and Save
+  DOM validation
+  DOM 4级规范
+
+
+
+  作用域及闭包
+  this和原型
+  类型和语法
+  异步编程
+  模块化
+
+框架设计思维
+容器思维
+发布订阅思维
+
+
+学习
+专业书学习
+源码学习
+
+
+
+web发展及前端发展
+
+
+webpack前端工程化的js模块化打包工具
+babel js语法编译器
+eslint 前端工程化编程规范统一的工具
+cli脚手架 前端最佳实践工具
+sass css预编译处理工具-css模块化工具
+postcss css后置处理工具-css语法编译替换
+gulp js任务流工具
