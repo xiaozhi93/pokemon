@@ -245,7 +245,7 @@ Pokemon is a minimal css framework for web
 
   # Dom编程
   HTML是描述网页的一个语言，html不是编程语言，是一个标记语言-超文本标记语言；标记语言是一套标记标签，HTML使用标记标签（html标签）描述网页；HTML标签定义HTML文档内容；Html文档描述网页，Html文档包含HTML标签和纯文本，HTML文档也被称为网页。
-  Css层叠样式表定义如何显示HTML元素，为了解决内容与表现分离的问题，多个样式可以层叠为一个。
+  Css层叠样式表（样式语言）定义如何显示HTML元素，为了解决 内容与表现分离的问题（为图文信息展示服务的），多个样式可以层叠为一个。特点，层叠策略灵活
   DOM是Html与xml文档的编程接口；html Dom定义了访问和操作html文档的标准方法；DOM以树结构表达HTML文档（HTML文档在浏览器中以DOM树结构呈现）。HTML文档如何通过浏览器渲染成DOM树。DOM(html文档的编程接口)一直在升级变化。
   DOM 0级
   规定了一套文档对象，集合，方法和属性
