@@ -227,6 +227,7 @@ Pokemon is a minimal css framework for web
 
 
   # 前端工程化
+  前端工程化经历三个阶段，库/框架选型（解决开发效率）-构建优化（提高运行性能）-js/css模块化（提交维护效率）
   - 模块化
   - 组件化
   - 规范化
@@ -287,9 +288,34 @@ Pokemon is a minimal css framework for web
 源码学习
 
 
+js模块化及Css模块化
+无模块化-函数写法-对象写法-自执行函数-CommonJS-AMD-CMD-ES6 Module
+使用less,sass使Css模块化
+
+JS 的运作机制可以分为 AST 分析、引擎执行两个步骤
+
+网页渲染流程
 
 web发展及前端发展
+web1.0 主要为图文信息服务
+web2.0 Ajax应用,网页交互服务
+web3.0主要为富图形和富媒体服务
 
+web应用
+web开发语言
+前后端分离
+web安全
+web状态
+web缓存
+web服务端与客户端渲染
+
+Vue项目性能优化
+  - Vue代码层面优化
+  - webpack配置层面优化
+  - web技术层面的优化
+
+前端模块化技术
+前端异步方案技术
 
 webpack前端工程化的js模块化打包工具
 babel js语法编译器
@@ -298,3 +324,20 @@ cli脚手架 前端最佳实践工具
 sass css预编译处理工具-css模块化工具
 postcss css后置处理工具-css语法编译替换
 gulp js任务流工具
+
+每一个设计都有设计理念或设计准则支撑
+前端的本质是用户与产品之间的接口
+
+架构设计
+# 领域驱动设计在前端中应用
+
+## 业务领域
+
+## 前端领域设计与结构分层
+![image](http://static4.vince.xin/E3D6DA30-6C81-44F0-8D01-FE8BA8E0AA5E.png)
+
+
+# 微服务架构及微前端
+微
+功能业务分层 功能为一级，业务为二级
+业务功能分层 业务为一级， 功能为二级

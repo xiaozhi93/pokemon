@@ -6,6 +6,16 @@
   }
 }
 
+@mixin  block {
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+}
+
+%block {
+  @include block;
+}
+
 @mixin center($width, $height: 0) {
   position: absolute;
   left: calc(50% - (#{$width} / 2));
