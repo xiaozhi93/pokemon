@@ -24,6 +24,20 @@ $size-5: 1.25rem !default;
 $size-6: 1rem !default;
 $size-7: 0.75rem !default;
 
+
+// Z-index
+$zindex-spin            : 8;
+$zindex-affix           : 10;
+$zindex-back-top        : 10;
+$zindex-select          : 900;
+$zindex-modal           : 1000;
+$zindex-message         : 1010;
+$zindex-notification    : 1010;
+$zindex-tooltip         : 1060;
+$zindex-transfer        : 1060;
+$zindex-loading-bar     : 2000;
+$zindex-spin-fullscreen : 2010;
+
 $radius-small: 2px !default;
 $radius: 4px !default;
 $radius-large: 6px !default;
