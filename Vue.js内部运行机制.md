@@ -17,3 +17,8 @@
 - 响应式的依赖收集追踪原理
 ### Virtual Dom
 ### Template模板编译
+
+
+
+### Vue编程范式
+mixin
