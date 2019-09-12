@@ -30,3 +30,11 @@ Vue路由动态渲染路由组件，，，或者路由容器页面组件-根据�
 Vue单页面组件组件对象状态及方法，，，及依赖分离（组件，方法，状态）, 组件事件
 
 Vue组件构造器及Vue组件实例及组件挂载
+
+
+## mvvm中的VM 主要做了两件微小的事情：
+从 M 到 V 的映射（Data Binding），这样可以大量节省你人肉来 update View 的代码
+从 V 到 M 的事件监听（DOM Listeners），这样你的 Model 会随着 View 触发事件而改变
+- M 到 V 实现
+- V 到 M 实现
+  从 V 到 M 主要由两类（ 虽然本质上都是监听 DOM ）构成，一类是用户自定义的 listener， 一类是 VM 自动处理的含有 value 属性元素的 listener
