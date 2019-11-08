@@ -136,3 +136,5 @@ export const mutations = {
 }
 
 ```
+
+const listeners = context.listeners[eventName];
