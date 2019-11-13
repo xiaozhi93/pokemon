@@ -160,7 +160,7 @@ Vue.config.keyCodes.f2 = 113;
   - router-view 的 key(由于Vue会复用相同的组件。处理相同路由组件的跳转)
   ```
   即 /page/1 => /page/2 或者 /page?id=1 => /page?id=2 这类链接跳转时, 将不在执行created, mounted之类的钩子
-  <router-view :key="$route.fullpath"></router-view>
+  <router-view :key="$route.fullPath"></router-view>
 
   ```
   ```
