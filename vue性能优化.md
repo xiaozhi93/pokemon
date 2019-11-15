@@ -1,3 +1,4 @@
+https://juejin.im/post/5d548b83f265da03ab42471d?utm_source=gold_browser_extension#heading-24
 # Vue代码层面的优化
 ## v-if和v-show区分使用场景
 ## computed和watch区分使用场景
@@ -24,4 +25,6 @@
 ## 开启gzip压缩
 ## 浏览器缓存（强制缓存和协商缓存）
 ## CDN的使用
+由于大部分服务器的带宽有限，超过限制，网页半天反应不过来。而CDN可以通过不同的域名加载文件，从而使下载文件的并发连接数大大增加。并且更低的网络延迟和丢包率。
+
 ## 使用 Chrome Performance 查找性能瓶颈
