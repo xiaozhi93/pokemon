@@ -120,3 +120,9 @@ BFC是一个独立的渲染区域，只有Block-level box参与，它规定了�
 0，0，0，1 标签，为元素选择器 div, :after
 0,0,0,0通用选择器 * ，子选择器 》 相邻选择器 + ，同胞选择器 ~
 
+
+
+rem是什么？
+w3c对rem的定义： font-size of the root element(根节点的字体大小)
+rem是相对单位  px是绝对单位
+使用手陶flexible库 页面渲染时计算根元素的font-size值
