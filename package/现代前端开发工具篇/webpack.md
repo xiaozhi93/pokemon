@@ -13,14 +13,15 @@
 ## 概念点
 - 模块
 - 循环依赖
-- 代码分割 code splitting
+- 代码分割 code splitting(有效地降低首屏加载资源的大小)
 - tree shaking
 - webpack-dev-server
-- chunk
+- chunk(是对一组有依赖关系的模块的封装)
 - bundle
 - publicPath
 - 一切皆模块（通过使用loader进行处理）
 - loader本质是一个函数 output = loader(input) output = loaderA(loaderB(loaderC(input)))
+- manifest webpack运行时模块 必须出现在最后，否则webpack将无法正常提取模块，在html中最先被引入，用来初始化webpakc环境
 
 ```
 使应用模块化的解决方案有Amd, Cmd， Umd（通用模块标准，模块集合，一个模块能运行在Commojs,AMD， 非模块环境下）, CommonJs, , Es Module（每个文件作为一个模块），npm模块（模块的包装及管理），目前比较流行通用的方案CommonJs, ES Module, 他们两者的区别在于模块依赖关系前者时动态的，后者时静态的，前端模块的导入,导出发生在代码的运行阶段，后者模块的导入导出语句是声明式的，有明确的依赖关系, 前者式值拷贝，后者是值映射，方法修改值不能直接修改，只读的
