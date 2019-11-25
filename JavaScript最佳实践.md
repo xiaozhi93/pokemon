@@ -1,0 +1,1 @@
+# 高质量的JavaScript代码
