@@ -1,0 +1,1 @@
+Javascript脚本语言的超集，就是在Javascript语言上做了增强
