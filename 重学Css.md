@@ -126,3 +126,10 @@ rem是什么？
 w3c对rem的定义： font-size of the root element(根节点的字体大小)
 rem是相对单位  px是绝对单位
 使用手陶flexible库 页面渲染时计算根元素的font-size值
+
+
+
+布局
+display + position + float
+flex
+grid

@@ -199,7 +199,41 @@ elem.innerHTML = x;                     // 在元素中显示 x
 
 # 立即执行函数，模块化，命名空间
 
-# 代码整洁之道与重构（编写客服，可复用，可重构的JavaScript软件）
+# 原型，继承与原型链
+
+# 函数式编程，偏函数（partial），柯里化(curry)，Compose和Pipe
+偏函数指的式固定一个函数的一些参数，然后产生另一个更小元的函数
+```
+function add(a, b) {
+    return a + b;
+}
+
+// 执行 add 函数，一次传入两个参数即可
+add(1, 2) // 3
+
+// 假设有一个 partial 函数可以做到局部应用
+var addOne = partial(add, 1);
+
+addOne(2) // 3
+```
+
+柯里化就是将一个多参数函数转换成多个单参数函数，也就是将一个n元函数转换成n个一元函数
+柯里化： 只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。
+```
+var curry = require('lodash').curry;
+
+var match = curry(function(what, str) {
+  return str.match(what);
+})
+
+match(/\s+/g, "hello world");
+// [ ' ' ]
+
+match(/\s+/g)("hello world");
+// [ ' ' ]
+```
+
+# 代码整洁之道与重构（编写可复用，可重构的JavaScript软件）
 
 
 # ES6
