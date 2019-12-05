@@ -89,3 +89,7 @@ console.log('Employee name: ' + employee.getName()); // Employee name: John Doe
 - 避免位置标记
 - 避免在源文件中添加版权注释
   
+
+## 重构
+- 不改变软件可观察行为的前提下，改善其内部结构
+- 以提高理解性和降低修改成本
