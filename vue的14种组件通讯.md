@@ -44,7 +44,7 @@ mounted(){
 }
 ```
 # v-slot（向子组件传递元素）
-# EventBus(全局Vue实例变量EventBus,所有数据通信，事件监听通过这个实例，原理利用on和emit)
+# EventBus(全局Vue实例变量EventBus,所有数据通信，事件监听通过这个实例，原理利用on和emit)(事件总线来进行任意两个组件的通信)
 ```
 // 在 main.js
 Vue.prototype.$eventBus=new Vue()
