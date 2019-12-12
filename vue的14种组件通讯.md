@@ -43,7 +43,7 @@ mounted(){
   this.$emit("update:title", '这是新的title')
 }
 ```
-# v-slot（向子组件传递元素）
+# v-slot（向子组件传递元素）及子组件向父元素分元素分发的内容传递数据，子组件写核心的业务不负责UI层面
 # EventBus(全局Vue实例变量EventBus,所有数据通信，事件监听通过这个实例，原理利用on和emit)(事件总线来进行任意两个组件的通信)
 ```
 // 在 main.js
