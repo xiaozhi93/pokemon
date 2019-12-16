@@ -84,3 +84,6 @@ Vue组件构造器及Vue组件实例及组件挂载
 - M 到 V 实现
 - V 到 M 实现
   从 V 到 M 主要由两类（ 虽然本质上都是监听 DOM ）构成，一类是用户自定义的 listener， 一类是 VM 自动处理的含有 value 属性元素的 listener
+
+## 响应式原理
+vue采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty劫持data属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。

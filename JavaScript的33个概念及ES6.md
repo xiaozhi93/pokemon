@@ -205,6 +205,11 @@ elem.innerHTML = x;                     // 在元素中显示 x
 
 ## Promise实现原理
 
+# js继承
+- 原型链继承 Cat.prototyhpe
+- 构造函数继承 Animal.call(this)
+- 组合继承  Animal.call(this) 和Cat.prototype = new Animal() 一起使用
+
 # 构造函数，原型，继承与原型链
 ## 关键字
 - 构造函数及new关键字
